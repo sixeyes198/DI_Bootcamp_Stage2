@@ -21,6 +21,13 @@ a{
     font-family: Agbalumo;
     color: black;
 }
+/* img setting */
+
+img{
+    border: 5px solid white;
+    border-style: double;
+    border-radius: 50%;
+}
 /* icons settings */
 .icons_container{
     
