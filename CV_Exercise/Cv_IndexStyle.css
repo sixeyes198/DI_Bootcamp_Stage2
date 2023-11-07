@@ -25,18 +25,38 @@ a{
 a:hover{
     color: white;
 }
+header{
+    display: flex;
+}
+.header-buttons{
+    position: relative;
+    left: 50%;
+    padding-top: 1rem;
+}
+.header-button{
+    border: none;
+    border-radius: 8px;
+    padding: 7px;
+    background-color: rgb(238,174,202);;
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    font-family: Agbalumo;
+    height: 35px;
+    text-align: center;
+}
+button:hover{
+    background-color: white;
+}
 /* text img container */
 .container{
     padding: 100px;
     display: flex;
-    flex-flow: row;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 .text-holder{
-    padding: 10rem;
+    padding: 6rem;
     display: flex;
     flex-direction: column;
-    align-self: center;
 }
 /* img setting */
 img{
@@ -44,7 +64,6 @@ img{
     border: 5px solid rgb(255, 255, 255);
     border-radius: 50%;
     box-shadow: 0px 0px 10px rgb(255, 255, 255);
-    object-fit: cover;
 }
 /* icons settings */
 .icons_container{
@@ -71,4 +90,27 @@ p{
 .p2{
     font-family:Edu TAS Beginner;
     font-size: 25px;
+}
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    .container{
+        padding: 100px;
+        display: flex;
+        flex-wrap: wrap-reverse;
+        }
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+    .container{
+        padding: 100px;
+        display: flex;
+        flex-wrap: wrap-reverse;
+        }
+}
+
+@media all and (max-width: 480px) {
+    .container{
+        padding: 100px;
+        display: flex;
+        flex-wrap: wrap-reverse;
+        }
 }
