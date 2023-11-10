@@ -8,8 +8,64 @@ body{
     background-repeat: no-repeat;
     min-height: 100vh;
 }
-.container1{
+.container{
     display: flex;
-    justify-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 150px;
 }
-
+h2{
+    font-size: 70px;
+    text-align: center;
+    color: white;
+}
+.forms{
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+}
+.forms2{
+    text-align: center;
+    font-size: 23px;
+}
+.login1{
+    text-align: center;
+}
+.icons_container{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+}
+li{
+    list-style-type: none;
+    padding: 5px;
+}
+.horizental-line{
+    border: none;
+    font-size: 14px;
+    height: 1.5em;
+    line-height: 1em;
+    position: relative;
+    text-align: center;
+}
+.horizental-line::before{
+    content: "";
+    background: linear-gradient(to right, transparent, white, transparent);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+}
+.horizental-line::after{
+    background-color: #ccff85;
+    color: white;
+    content: attr(data-content);
+    line-height: 1.5em;
+    padding: 0 7px;
+    position: relative;
+}
+a{
+    color: white;
+}
