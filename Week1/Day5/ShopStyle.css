@@ -22,6 +22,11 @@ a{
     padding: 1em;
     font-family: Agbalumo;
 }
+.landpageimg{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
 /* styling the footer changing its width to fit the whole screen */
 .footer{
     position: fixed;

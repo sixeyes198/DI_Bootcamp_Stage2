@@ -27,6 +27,8 @@ a{
 .container{
     display: flex;
     justify-content: center;
+    top: 0.4em;
+    padding-left:150px ;
 }
 .gallery{
      flex-direction: column;
