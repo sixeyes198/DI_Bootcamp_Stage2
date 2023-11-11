@@ -1,0 +1,36 @@
+/*removing the spaces*/
+*{
+    padding: 0;
+    margin: 0;
+}
+/* styling the size and color of the header */
+header{
+    background-color: black;
+    height: 3.2em;
+}
+/* styling the logo */
+.bxs-ghost{
+    font-size: 2.6em;
+    color: white;
+    padding: 7px;
+}
+/* styling the a tag and moving it right   */
+a{
+    text-decoration-line: none;
+    float: right;
+    color: white;
+    padding: 1em;
+    font-family: Agbalumo;
+}
+/* styling the footer changing its width to fit the whole screen */
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: Agbalumo;
+    padding: 0.4em;
+}
