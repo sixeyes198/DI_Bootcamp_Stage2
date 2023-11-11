@@ -23,6 +23,40 @@ a{
     font-family: Agbalumo;
     
 }
+/* styling the container and text location  */
+.container{
+    display: flex;
+    top: 0.4em;
+}
+ .gallery{
+     flex-direction: column;
+ }
+ .description{
+     padding: 4em;
+     font-size: 1em;
+ }
+ .buttons{
+    padding: 0.4rem;
+ }
+ .order-button{
+     font-size: 18px;
+     border: none;
+     background-color: rgb(0, 0, 0);
+     border-radius: 5px;
+     padding: 5px;
+     color: white;
+ }
+ .order-button:hover{
+     cursor: pointer;
+     background-color: rgb(131, 191, 255);
+ }
+ .container-2{
+    display: flex;
+    top: 0.4em;
+}
+img{
+    padding: 0.3em;
+}
 /* styling the footer changing its width to fit the whole screen */
 .footer{
     position: fixed;
