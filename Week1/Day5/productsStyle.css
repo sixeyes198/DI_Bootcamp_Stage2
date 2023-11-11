@@ -26,37 +26,51 @@ a{
 /* styling the container and text location  */
 .container{
     display: flex;
-    top: 0.4em;
+    justify-content: center;
 }
- .gallery{
+.gallery{
      flex-direction: column;
- }
- .description{
+     padding-top: 1.9em;
+     margin: 0 10px;
+     transition: 0.5s;
+}
+.gallery:hover{
+    transform: scale(1.1);
+    box-shadow: 2px 2px 5px grey;
+}
+.description{
      padding: 4em;
      font-size: 1em;
- }
- .buttons{
+}
+.buttons{
     padding: 0.4rem;
- }
- .order-button{
+}
+.order-button{
      font-size: 18px;
      border: none;
      background-color: rgb(0, 0, 0);
      border-radius: 5px;
      padding: 5px;
      color: white;
- }
- .order-button:hover{
+}
+.order-button:hover{
      cursor: pointer;
      background-color: rgb(131, 191, 255);
- }
- .container-2{
+}
+.container-2{
     display: flex;
     top: 0.4em;
+    justify-content: center;
 }
 img{
     padding: 0.3em;
+    width: 250px;
+    height: 300px;
 }
+/* img:hover{
+    transform: scale(1.1);
+    box-shadow: 2px 2px 5px grey;
+} */
 /* styling the footer changing its width to fit the whole screen */
 .footer{
     position: fixed;
@@ -68,4 +82,50 @@ img{
     text-align: center;
     font-family: Agbalumo;
     padding: 0.4em;
+}
+/* responsive */
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    .container{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .container-2{
+        display: flex;
+        top: 0.4em;
+        justify-content: center;
+        flex-direction: column;
+
+    }
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+    .container{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .container-2{
+        display: flex;
+        top: 0.4em;
+        justify-content: center;
+        flex-direction: column;
+
+    }
+}
+
+@media all and (max-width: 480px) {
+    .container{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .container-2{
+        display: flex;
+        top: 0.4em;
+        justify-content: center;
+        flex-direction: column;
+
+    }
 }
