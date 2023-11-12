@@ -15,33 +15,34 @@ header{
     padding: 7px;
 }
 .bxs-ghost:hover{
-    color: yellow;
+    color: rgb(255, 54, 54);
 }
 /* styling the a tag and moving it right   */
 a{
     text-decoration-line: none;
+    color: rgb(255, 255, 255);
     float: right;
-    color: white;
     padding: 1em;
     font-family: Agbalumo;
 }
 a:hover{
     color: pink;
 }
-.landpageimg{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-/* styling the footer changing its width to fit the whole screen */
-.footer{
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: black;
-    color: white;
+.Centered-flex{
     text-align: center;
+    font-size: 23px;
+    width: 50%;
+    margin: 0 auto;
+    transition: 1s;
+}
+.Centered-flex:hover{
+    box-shadow: 2px 2px 5px grey;
+    padding: 10px;
+}
+h2{
+    padding: 10px;
     font-family: Agbalumo;
-    padding: 0.4em;
+}
+input{
+    padding: 4px;
 }

@@ -14,6 +14,9 @@ header{
     color: white;
     padding: 7px;
 }
+.bx-ghost:hover{
+    color: blue;
+}
 /* styling the a tag and moving it right   */
 a{
     text-decoration-line: none;
@@ -21,7 +24,9 @@ a{
     float: right;
     padding: 1em;
     font-family: Agbalumo;
-    
+}
+a:hover{
+    color: pink;
 }
 /* styling the container and text location  */
 .container{

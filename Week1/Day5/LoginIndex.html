@@ -9,9 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Edu+TAS+Beginner:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- Boxicons link -->
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    <!-- linking css  -->
-    <link rel="stylesheet" href="/Week1/Day5/ShopStyle.css">
-    <title>Shopping site Gamescon</title>
+    <!-- linking css -->
+    <link rel="stylesheet" href="/Week1/Day5/LoginStyle.css">
+    <title>Log in</title>
 </head>
 <body>
     <!-- making the header and placing the nav bar inside  -->
@@ -19,17 +19,20 @@
         <nav class="nav-container">
             <i class='bx bxs-ghost'></i>
             <a href="/Week1/Day5/productsIndex.html"> Our products</a>
-            <a href="/Week1/Day5/SignUpIndex.html">Sign Up</a>
-            <a href="/Week1/Day5/LoginIndex.html">Login</a>
         </nav>
     </header>
-    <!-- landing page image -->
-    <div class="landpageimg">
-        <img src="/Week1/Day5/Gallery/Gamescon_Future_Gaming-removebg-preview.png" alt="logo gamescon futre gaming">
-    </div>
-    <!-- making a footer for the content -->
-    <div class="footer">
-        <p>This site was built by: Yossi guadie, 2023</p>
+
+    <div class="center">
+        <form>
+            <h2>Log in</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br><br>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            
+            <input type="submit" value="Submit">
+        </form>
     </div>
 
 </body>
