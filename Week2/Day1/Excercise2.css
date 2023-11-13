@@ -1,0 +1,20 @@
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+.box1{
+    background-color: rgb(106, 106, 255);
+    flex: 0.2;
+}
+.box2{
+    background-color: rgb(106, 106, 255);
+    flex: 0.5;
+    width: 400px;
+    margin-left: auto;
+}
+.box3{
+    background-color: rgb(106, 106, 255);
+   flex: 0.2;
+}
