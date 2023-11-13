@@ -1,0 +1,22 @@
+
+.flex-container{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   height: 100vh;
+}
+.box1{
+    background-color: rgb(83, 83, 252);
+    padding: 20px;
+}
+.box2{
+    background-color: rgb(83, 83, 252);
+    flex: 0.5;
+    width:700px;
+    margin: 0 auto;
+}
+.box3{
+    background-color: rgb(83, 83, 252);
+    padding: 20px;
+
+}
