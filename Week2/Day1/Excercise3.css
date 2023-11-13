@@ -1,0 +1,15 @@
+.flex-container{
+    display: flex;
+}
+.box1{
+    background-color: rgb(81, 81, 187);
+    flex: 0.5;
+}
+.box2{
+    background-color: rgb(107, 107, 255);
+    flex: 1;
+}
+.box3{
+    background-color: rgb(255, 0, 47);
+    flex: 1;
+}
