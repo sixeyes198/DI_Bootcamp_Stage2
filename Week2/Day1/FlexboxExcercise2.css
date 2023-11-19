@@ -15,8 +15,8 @@
 .box2{
     background-color: rgb(106, 106, 255);
     flex: 0.5;
-    width: 400px;
-    margin-left: auto;
+    width: 300px;
+    align-self: flex-end;
 }
 .box3{
     background-color: rgb(106, 106, 255);
