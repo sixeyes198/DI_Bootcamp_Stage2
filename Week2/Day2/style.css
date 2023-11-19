@@ -22,6 +22,7 @@ body{
 .userDataFlex{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 #title2{
     color: white;
@@ -40,6 +41,7 @@ h2{
     justify-content: space-evenly;
     height: 200px;
     position: relative;
+    flex-wrap: wrap;
 }
 #redBox{
     background-color: white;
@@ -99,7 +101,7 @@ h6, #bottomHead{
 .circle{
     height: 50px;
     width: 50px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(208, 214, 44);
     border-radius: 50%;
     position: absolute;
     top: 70px;
@@ -108,7 +110,7 @@ h6, #bottomHead{
 .circle1{
     height: 50px;
     width: 50px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(87, 178, 203);
     border-radius: 50%;
     position: absolute;
     top: 70px;
@@ -123,4 +125,59 @@ h6, #bottomHead{
     top: 70px;
     left: 170px;
 }
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    #miniContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+    #redBox, #purpleBox, #greenBox{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        align-self: center;
+    }
+.circle{
+        top: 18%; /* Adjusted from top: 70px; */
+        left: 50%; /* Adjusted from left: 250px; */
+        transform: translate(-50%, -50%);
+ }
+}
 
+@media all and (min-width: 480px) and (max-width: 768px) {
+    #miniContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+    #redBox, #purpleBox, #greenBox{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        align-self: center;
+    }
+    .circle{
+        top: 18%; /* Adjusted from top: 70px; */
+        left: 50%; /* Adjusted from left: 250px; */
+        transform: translate(-50%, -50%);
+ }
+}
+
+@media all and (max-width: 480px) {
+    #miniContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+    #redBox, #purpleBox, #greenBox{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        align-self: center;
+    }
+    .circle{
+        top: 18%; /* Adjusted from top: 70px; */
+        left: 50%; /* Adjusted from left: 250px; */
+        transform: translate(-50%, -50%);
+ }
+}
