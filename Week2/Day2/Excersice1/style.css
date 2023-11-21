@@ -87,15 +87,15 @@ h6, #bottomHead{
     text-transform: bold;
 }
 #red{
-    background-color: rgb(209, 32, 32);
+    background-color: lightgray;
     height: 50%;
 }
 #purple{
-    background-color: lightcoral;
+    background-color: lightgray;
     height: 50%;
 }
 #green{
-    background-color: rgb(163, 208, 96);
+    background-color: lightgray;
     height: 50%;
 }
 .circle{
