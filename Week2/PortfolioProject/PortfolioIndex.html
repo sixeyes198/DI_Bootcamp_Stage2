@@ -13,7 +13,48 @@
     <title>My Protfolio</title>
 </head>
 <body>
-    
+      <!-- Navbar section from bootstrap -->
+    <nav class="navbar navbar-expand-md bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand text-warning fs-1" href="#"><i class='bx bxl-dev-to' ></i></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- floating the a tags to the end  -->
+          <div class="float-end">
+            <div class="collapse navbar-collapse me-5" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active text-warning" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active text-warning" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active text-warning" href="#">Projects</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-warning" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Contact
+                    </a>
+                    <ul class="dropdown-menu">
+                    <li><a class="dropdown-item text-warning" href="#">Email Me</a></li>
+                    </ul>
+                </li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+        <div class="textcontainer d-flex justify-content-center text-warning">
+            <h1>Fullstack developer Student</h1>
+            </div>
+
+      <!-- container for thee image  -->
+      <div class="container">
+        <img src="/Week2/PortfolioProject/5e53588fd399239e9b54dc11_peep-59.png" alt="profile picture" width="400px">
+      </div>
+      
     <!-- bootstrap script linking -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
