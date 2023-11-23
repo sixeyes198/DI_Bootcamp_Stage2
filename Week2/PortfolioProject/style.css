@@ -3,8 +3,45 @@
     padding: 0;
 }
 .container{
+    margin-top: 50px;
+}
+.textcontainer{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.bx-laptop{
+    font-size: 80px;
+}
+h1{
+    font-family: Bebas Neue;
+}
+h4{
+    color: black;
+}
+img{
     margin-top: 100px;
 }
-nav{
-    color: orangered;
+.container3{
+    text-align: center;
+    background-color: orange;
+    height: 300px;
+}
+/* all the media queries */
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+ 
+}
+
+@media all and (min-width: 320px) and (max-width: 480px) {
+    
+  
+    
 }

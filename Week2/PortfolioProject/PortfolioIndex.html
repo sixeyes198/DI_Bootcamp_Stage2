@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- boxicons link -->
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Bebas+Neue&family=Edu+TAS+Beginner:wght@400;600;700&family=Quicksand:wght@300;600&display=swap" rel="stylesheet"> 
+    <!-- boxicons link -->
      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
      <!-- bootstrap connnection -->
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -14,14 +18,14 @@
 </head>
 <body>
       <!-- Navbar section from bootstrap -->
-    <nav class="navbar navbar-expand-md bg-body-tertiary fixed-top">
+    <nav class="navbar navbar-expand-sm bg-body-tertiary fixed-top">
         <div class="container-fluid">
           <a class="navbar-brand text-warning fs-1" href="#"><i class='bx bxl-dev-to' ></i></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <!-- floating the a tags to the end  -->
-          <div class="float-end">
+          <!-- <div class="float-end"> -->
             <div class="collapse navbar-collapse me-5" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                 <li class="nav-item">
@@ -42,18 +46,43 @@
                     </ul>
                 </li>
                 </ul>
-            </div>
+            <!-- </div> -->
           </div>
         </div>
       </nav>
-        <div class="textcontainer d-flex justify-content-center text-warning">
+      <!-- top text -->
+      <div class="position-relative">
+      <div class="position-absolute bottom-50 end-50">
+        <div class="textcontainer d-flex justify-content-center text-warning ">
+            <i class='bx bx-laptop' ></i>
             <h1>Fullstack developer Student</h1>
+            <h4>A Frontend, Backend, and whats in between focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product</h4>
             </div>
+        </div>
 
-      <!-- container for thee image  -->
+      <!-- container for the image  -->
       <div class="container">
         <img src="/Week2/PortfolioProject/5e53588fd399239e9b54dc11_peep-59.png" alt="profile picture" width="400px">
       </div>
+    </div>
+
+    <section>
+        <div class="container3">
+            <h1 class="textMarginTop">Hi, I’m Yossi. Nice to meet you</h1>
+            <h2 class="textMarginTop">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio veritatis incidunt dolores accusamus aut! Tempora corrupti inventore est pariatur id accusamus culpa consectetur accusantium aliquid laborum cum, architecto ut ea.</h2>
+        </div>
+    </section>
+    <!-- <section class="section is-medium is-primary has-text-centered is-long ">
+        <div class="container bg-warning">
+          <div class="columns is-centered">
+            <div class="column is-three-fifths">
+              <h1 class="title is-spaced is-size-3-desktop is-size-4-mobile text-center">Hi, I’m Yossi. Nice to meet you.</h1>
+              <h2 class="subtitle is-size-5-desktop has-text-weight-normal">Since beginning my journey as a freelance designer over 11 years ago, I've done remote work for agencies, consulted for startups, and collaborated with talented people to create digital products for both business and consumer use. I'm quietly confident, naturally curious, and perpetually working on improving my chops one design problem at a time.</h2>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
       
     <!-- bootstrap script linking -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
