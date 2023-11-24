@@ -1,35 +1,22 @@
-*{
-    margin: 0;
-    padding: 0;
+.bxl-dev-to{
+    font-size: 50px;
 }
-.container{
-    margin-top: 50px;
+#image1{
+    /* display: flex; */
+    width: 400px;
 }
-.textcontainer{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    width: 600px;
-    text-align: center;
-    left: 50%;
-    transform: translateX(-50%);
+.bx-info-circle{
+    font-size: 50px;
+    color: orange;
 }
-.bx-laptop{
-    font-size: 80px;
+.icons_container{
+    font-size: 50px;
 }
-h1{
-    font-family: Bebas Neue;
+.Orange{
+    color: Orange;
 }
-h4{
-    color: black;
-}
-img{
-    margin-top: 100px;
-}
-.container3{
-    text-align: center;
-    background-color: orange;
-    height: 300px;
+li{
+    list-style-type: none;
 }
 /* all the media queries */
 @media all and (min-width: 768px) and (max-width: 1024px) {
@@ -43,5 +30,4 @@ img{
 @media all and (min-width: 320px) and (max-width: 480px) {
     
   
-    
 }
