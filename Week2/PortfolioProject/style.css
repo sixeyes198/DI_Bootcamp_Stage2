@@ -5,15 +5,27 @@
     /* display: flex; */
     width: 400px;
 }
+.bx-infinite{
+    font-size: 50px;
+    color: lightgrey;
+}
 .bx-info-circle{
     font-size: 50px;
-    color: orange;
+    color: black;
+}
+.bx-wink-smile{
+    font-size: 50px;
+    color: black;
 }
 .icons_container{
     font-size: 50px;
 }
+
 .Orange{
     color: Orange;
+}
+.Orange:hover{
+    color: black;
 }
 li{
     list-style-type: none;
