@@ -13,9 +13,17 @@
     font-size: 50px;
     color: black;
 }
+.bx-desktop{
+    font-size: 50px;
+    color: black;
+}
 .bx-wink-smile{
     font-size: 50px;
     color: black;
+}
+.bxs-contact{
+    font-size: 50px;
+    color: orange;
 }
 .icons_container{
     font-size: 50px;
@@ -29,6 +37,20 @@
 }
 li{
     list-style-type: none;
+}
+#info{
+    flex-wrap: wrap;
+}
+#underline{
+    text-decoration: underline 1px;
+    text-underline-position: under;
+}
+#Projects{
+    margin-top: 100px;
+    flex-wrap: wrap;
+}
+#Contact{
+    font-size: 30px;
 }
 /* all the media queries */
 @media all and (min-width: 768px) and (max-width: 1024px) {

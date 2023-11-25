@@ -33,10 +33,10 @@
             <a class="nav-link text-warning" href="#info">Info</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-warning" href="#">Projects</a>
+            <a class="nav-link text-warning" href="#Projects">Projects</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-warning" href="#">Contact</a>
+            <a class="nav-link text-warning" href="#Contact">Contact</a>
           </li>
         </ul>
         <span class="navbar-text text-warning">Powered by bootstrap</span>
@@ -65,30 +65,100 @@
       </ul>
   </div>
 
-  <h2 class="text-center lead">Here is some of my information</h2>
-                        <!-- maybe add some unordered list -->
+  <h2 class="text-center lead" id="underline">Here is some of my information</h2>
+  
+                        
 <div class="container d-flex justify-content-center" id="info">
-  <div class="card border-warning mb-3 mx-1 mt-5" style="max-width: 400px;">
-    <div class="card-header text-center "><i class='bx bx-info-circle'></i><br>Skills</div>
+  <div class="card border-warning mb-3 mx-1 mt-5" style="max-width: 300px;">
+    <div class="card-header text-center bg-grey"><i class='bx bx-desktop'></i><br>Skills</div>
     <div class="card-body">
-      <h5 class="card-title">Warning card title</h5>
+      <h5 class="card-title lead">Front-end:</h5>
       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis delectus rerum laborum deleniti, animi placeat ab quisquam praesentium doloremque minima vitae quidem ex accusantium, modi officia eaque, facere esse ut.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </p>
+      <h5 class="card-title lead">Back-end:</h5>
+      <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias, iusto.
       </p>
     </div>
   </div>
 
-  <div class="card border-warning mb-3 mx-1 mt-5" style="max-width: 400px;">
-    <div class="card-header text-center"><i class='bx bx-wink-smile'></i><br>Hobbies</div>
+  <div class="card border-warning mb-3 mx-1 mt-5" style="max-width: 300px;">
+    <div class="card-header text-center bg-white"><i class='bx bx-wink-smile'></i><br>Hobbies</div>
     <div class="card-body">
-      <h5 class="card-title">Warning card title</h5>
+      <h5 class="card-title lead">My interests:</h5>
       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis delectus rerum laborum deleniti, animi placeat ab quisquam praesentium doloremque minima vitae quidem ex accusantium, modi officia eaque, facere esse ut.
+        Lorem ipsum dolor 
+      </p>
+    </div>
+  </div>
+
+  <div class="card border-warning mb-3 mx-1 mt-5" style="max-width: 300px;">
+    <div class="card-header text-center bg-grey"><i class='bx bx-info-circle'></i><br>About me:</div>
+    <div class="card-body">
+      <h5 class="card-title lead">Front-end:</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </p>
+      <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias, iusto.
       </p>
     </div>
   </div>
   
 </div>
+                    <!-- here is the projects section -->
+<div class="container d-flex justify-content-center" id="Projects">
+  <div class="card ms-2 mt-2" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+
+  <div class="card ms-2 mt-2" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+
+  <div class="card ms-2 mt-2" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+
+  <div class="card ms-2 mt-2" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+
+</div>
+              <!-- contact section -->
+
+<div class="container text-center" id="Contact">
+  <div class="row align-items-start mt-5 ">
+    <div class="col">
+      <i class='bx bxs-contact'></i>
+      <h1 class="text-black">Title</h1> 
+      <p class="text-center lead">Center aligned text on all viewport sizes
+      more textmore textmore textmore<br> textmore textmore textmore textmore<br>
+       textmore textmore textmore textmore text.</p> 
+       <p><a href="#" class="link-primary link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover ">See More<i class='bx bx-arrow-back bx-rotate-180 ms-2' ></i></a></p>
+    </div>
+  </div>
+</div>
+
 
 
 
