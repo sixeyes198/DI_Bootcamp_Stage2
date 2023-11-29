@@ -6,4 +6,3 @@ let wordNot = sentence.indexOf("not");
 //3
 let wordBad = sentence.indexOf("bad");
 //4
-if (wordNot)
