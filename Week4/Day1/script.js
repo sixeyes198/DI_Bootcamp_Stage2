@@ -10,6 +10,16 @@
 // math(10);
 
 
+function familyAge(myAge){
+    let momAge = 2 * myAge ;
+    let dadAge = 1.2 * momAge;
+    console.log("My mom age is" + " "+ momAge + " " + "Years old");
+    console.log("My dad age is" + " " + dadAge + " " + "Years old");
+}
+familyAge(30);
+
+
+
 //Excersice 2
 
                 //ONE WAY 
