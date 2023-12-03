@@ -33,7 +33,7 @@
         console.log(`Tip 15`);
     }
 
-    finalBill = parsedInput + bill;
-    console.log(finalBill.parsedInput());
 }
 calculateTip();
+
+// finish this at home
