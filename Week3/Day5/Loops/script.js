@@ -84,48 +84,72 @@
 // while (condition);
 
 
-let i = 0;
+// let i = 0;
 
-do{
-    console.log("The number is " + i)
-    i++;
-}
-while(i < 10);
+// do{
+//     console.log("The number is " + i)
+//     i++;
+// }
+// while(i < 10);
 
 
 // Break Statement
 // The break statement breaks the loop and continues executing the code after the loop
 
-for (let i = 0; i < 10; i++) {
-  if (i === 3) { 
-      break;
-    }
-  console.log("The number is " + i); // 0 1 2
-}
+// for (let i = 0; i < 10; i++) {
+//   if (i === 3) { 
+//       break;
+//     }
+//   console.log("The number is " + i); // 0 1 2
+// }
 
 
 // Continue Statement
 // The continue statement breaks one iteration (in the loop), and continues with the next iteration.
 
-for (let i = 0; i < 10; i++) {
-  if (i === 3) { 
-      continue; 
-  }
-  console.log("The number is " + i); // 0 1 2 4 5 6 7 8 9 
-}
+// for (let i = 0; i < 10; i++) {
+//   if (i === 3) { 
+//       continue; 
+//   }
+//   console.log("The number is " + i); // 0 1 2 4 5 6 7 8 9 
+// }
 
 
 // Exercise 2
 
-let names= ["john", "sarah", 23, "Rudolf",34]
+// let names= ["john", "sarah", 23, "Rudolf",34]
 
-for (let i = 0; i < names.length; i++){
-    if(typeof names[i]=== "string"){
-        if(names[i][0] !== names[i][0].toUpperCase()){
-            names[i] = names[i][0].toUpperCase() + names[i].slice(1);
-        }
-        console.log(names[i]);
-    }
+// for (let i = 0; i < names.length; i++){
+//     if(typeof names[i]=== "string"){
+//         if(names[i][0] !== names[i][0].toUpperCase()){
+//             names[i] = names[i][0].toUpperCase() + names[i].slice(1);
+//         }
+//         console.log(names[i]);
+//     }
+// }
+
+
+
+
+
+//Excersice 3 : repeat the question
+// 1 .Prompt the user for a number.
+// Hint : Check the data type you receive from the prompt (ie. Use the typeof method)
+
+
+let userInput = prompt("please enter a number:");
+console.log(typeof userInput);
+let userNum = parseFloat(userInput);
+
+do{
+    prompt("Enter a new number:");
+    if(userNum < 10){
+      console.log("Pick a new number");
+    }else(
+      console.log("Its ok")
+    )
 }
+while(userNum < 10);
+
 
 

@@ -99,10 +99,14 @@
 
 // do{
 //     prompt("Enter a new number:");
-//     if(userNum === 10)
-//     break;
+//     if(userNum < 10){
+//       console.log("Pick a new number");
+//     }else(
+//       console.log("Its ok")
+//     )
 // }
 // while(userNum < 10);
+
 
 
 
