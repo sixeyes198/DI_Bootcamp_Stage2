@@ -81,36 +81,36 @@
 // Call the myBill() function.
 
 
-// const stock = { 
-//     "banana": 6, 
-//     "apple": 0,
-//     "pear": 12,
-//     "orange": 32,
-//     "blueberry":1
-// };
-// const prices = {    
-//     "banana": 4, 
-//     "apple": 2, 
-//     "pear": 1,
-//     "orange": 1.5,
-//     "blueberry":10
-// }; 
+const stock = { 
+    "banana": 6, 
+    "apple": 0,
+    "pear": 12,
+    "orange": 32,
+    "blueberry":1
+};
+const prices = {    
+    "banana": 4, 
+    "apple": 2, 
+    "pear": 1,
+    "orange": 1.5,
+    "blueberry":10
+}; 
 
-// const shoppingList = ["Banana","Orange","Apple"];
+const shoppingList = ["Banana","Orange","Apple"];
 
-// function myBill() {
-//    if(stock.banana > 1) {
-//     console.log("the price for banana is:"  +'$'+ prices.banana);
-//    if (stock.orange > 1) {
-//     console.log("the price for orange is:" +'$'+prices.orange);
-//    }if ( stock.apple > 1) {
-//     console.log(prices.apple);
-//    }{
-//     console.log(`This item is out of stock`);
-//    }
-//  }
-// }
-// myBill()
+function myBill() {
+   if(stock.banana > 1) {
+    console.log("the price for banana is:"  +'$'+ prices.banana);
+   if (stock.orange > 1) {
+    console.log("the price for orange is:" +'$'+prices.orange);
+   }if ( stock.apple > 1) {
+    console.log(prices.apple);
+   }{
+    console.log(`This item is out of stock`);
+   }
+ }
+}
+myBill()
 
 
 
