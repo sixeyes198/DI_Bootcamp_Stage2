@@ -1,6 +1,6 @@
 let player1Word = prompt(
   `Please enter a word. The word must have a minimum of 8 letters:`
-);
+); // prompting the user for a num and saving it in a variable
 
 if (player1Word.length < 8) {
   console.log(`The word must have at least 8 letters. Please try again.`);
