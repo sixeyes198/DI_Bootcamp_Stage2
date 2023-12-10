@@ -16,7 +16,6 @@
 // infoAboutPerson("David", 45, "Blue");
 // infoAboutPerson("Josh", 12, "Yellow");
 
-
 //Excersice 2 Tips
 //2 / 1 reate a function named calculateTip() that takes no parameter
 //2 /2 Inside the function, use prompt to ask John for the amount of the bill.
@@ -49,8 +48,6 @@
 // }
 // calculateTip();
 
-
-
 //Exercise 3 : Find The Numbers Divisible By 23
 
 // function isDivisible(divisor){
@@ -69,8 +66,6 @@
 // isDivisible(3);
 // isDivisible(45);
 
-
-
 //Exercise 4 : Shopping List
 // Create a function called myBill() that takes no parameters.
 
@@ -80,37 +75,35 @@
 
 // Call the myBill() function.
 
-
-const stock = { 
-    "banana": 6, 
-    "apple": 0,
-    "pear": 12,
-    "orange": 32,
-    "blueberry":1
+const stock = {
+  banana: 6,
+  apple: 0,
+  pear: 12,
+  orange: 32,
+  blueberry: 1,
 };
-const prices = {    
-    "banana": 4, 
-    "apple": 2, 
-    "pear": 1,
-    "orange": 1.5,
-    "blueberry":10
-}; 
+const prices = {
+  banana: 4,
+  apple: 2,
+  pear: 1,
+  orange: 1.5,
+  blueberry: 10,
+};
 
-const shoppingList = ["Banana","Orange","Apple"];
+const shoppingList = ["Banana", "Orange", "Apple"];
 
 function myBill() {
-   if(stock.banana > 1) {
-    console.log("the price for banana is:"  +'$'+ prices.banana);
-   if (stock.orange > 1) {
-    console.log("the price for orange is:" +'$'+prices.orange);
-   }if ( stock.apple > 1) {
-    console.log(prices.apple);
-   }{
-    console.log(`This item is out of stock`);
-   }
- }
+  if (stock.banana > 1) {
+    console.log("the price for banana is:" + "$" + prices.banana);
+    if (stock.orange > 1) {
+      console.log("the price for orange is:" + "$" + prices.orange);
+    }
+    if (stock.apple > 1) {
+      console.log(prices.apple);
+    }
+    {
+      console.log(`This item is out of stock`);
+    }
+  }
 }
-myBill()
-
-
-
+myBill();
