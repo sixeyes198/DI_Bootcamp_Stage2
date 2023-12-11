@@ -1,0 +1,116 @@
+// Excersice 1//
+
+// 1. Retrieve the div and console.log it
+// const div = document.querySelector(`div`);
+// console.log(div);
+
+// 2. change the name “Pete” to “Richard”.
+// const ul = (document.querySelectorAll(`li`)[1].innerText = `Richard`);
+// console.log(ul);
+
+// 3. Delete  the text node of Sarah
+
+// const list1 = document.querySelectorAll(`li`)[3];
+// list1.remove(`Sarah`); // here sarah is removed
+
+// 4. change each first name  of the ul's
+
+// const Lists = document.querySelectorAll(`.list`);
+// Lists.forEach((list) => (list.firstElementChild.textContent = `Joe`));
+// console.log(Lists);
+
+//Exercise 2 :
+// Using Javascript:
+// Add a “light blue” background color and some padding to the <div>.
+// Do not display the <li> that contains the text node “John”. (the first <li> of the <ul>)
+// Add a border to the <li> that contains the text node “Pete”. (the second <li> of the <ul>)
+// Change the font size of the whole body.
+
+// const style = document.getElementById(`color`);
+// style.setAttribute(`style`, `padding:8px; background-color:lightblue`);
+// console.log(style);
+
+// const display = document.querySelector(`li`);
+// display.setAttribute(`style`, `display:none`);
+// console.log(display);
+
+// const display2 = document.querySelectorAll(`li`)[1];
+// display2.setAttribute(`style`, `border:2px dashed orange`);
+// console.log(display2);
+
+// const body = document.querySelector(`Body`);
+// body.setAttribute(`style`, `font-size: 30px`);
+// console.log(body);
+
+// excersice 3
+
+// using Javascript, in the <div>, change the value of the id attribute from navBar to socialNetworkNavigation, using the setAttribute method.
+// We are going to add a new <li> to the <ul>.
+// First, create a new <li> tag (use the createElement method).
+// Create a new text node with “Logout” as its specified text.
+// Append the text node to the newly created list node (<li>).
+// Finally, append this updated list node to the unordered list (<ul>), using the appendChild method.
+// use the firstElementChild and the lastElementChild properties to retrieve the first and last <li> elements from their parent element (<ul>). Display the text of each link. (Hint: use the textContent property).
+
+// const div = document.getElementById(`navBar`);
+// div.setAttribute(`id`, `socialNetworkNavigation`);
+// console.log(div);
+
+// const elem = document.createElement(`li`);
+
+// const node = document.createTextNode(`Logout`);
+// elem.append(node);
+
+// const div2 = document.querySelector(`ul`).appendChild(elem);
+// console.log(div2);
+
+// const div3 = document.querySelector(`ul`).firstElementChild.textContent;
+// console.log(div3);
+
+// const div4 = document.querySelector(`ul`).lastElementChild.textContent;
+// console.log(div4);
+
+// Excersice 4 : My book list
+
+//In the js file, create an array called allBooks. This is an array of objects. Each object is a book that has 4 keys (ie. 4 properties) :
+// title,
+// author,
+// image : a url,
+// alreadyRead : which is a boolean (true or false)
+
+const allBooks = [];
+const book1 = {
+  title: `Game of thornes`,
+  author: `George R. R. Martin`,
+  Image: `https://prodimage.images-bn.com/pimages/9780553805444_p0_v5_s1200x630.jpg `,
+  alreadyRead: false,
+};
+
+const book2 = {
+  title: `The witcher`,
+  author: `Andrzej Sapkowski`,
+  Image: ` https://m.media-amazon.com/images/I/51WpIuX+EIL.jpg `,
+  alreadyRead: true,
+};
+
+allBooks.push(book1, book2);
+console.log(allBooks);
+
+const table = document.createElement(`table`);
+table.innerText = `
+<thead>
+    <tr>
+        <th>book list</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+      <td>one</td>
+      <td> two columns</td>
+      <td>three</td>
+    </tr>
+  </tbody>`;
+
+const div = document.querySelector(`.list-books`);
+div.appendChild(table);
+console.log(div);
