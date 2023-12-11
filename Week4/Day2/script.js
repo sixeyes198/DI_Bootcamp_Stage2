@@ -147,73 +147,93 @@
 
 //1. Define a function called hotelCost()
 
-const hotelPrice1Night = 140;
+// const hotelPrice1Night = 140;
 
-function hotelCost() {
-  let userChoice;
-  do {
-    userChoice = Number(
-      prompt(`Welcome, How many nights would you like to stay?`)
-    );
-  } while (userChoice === 0 || isNaN(userChoice));
-  return hotelPrice1Night * userChoice;
+// function hotelCost() {
+//   let userChoice;
+//   do {
+//     userChoice = Number(
+//       prompt(`Welcome, How many nights would you like to stay?`)
+//     );
+//   } while (userChoice === 0 || isNaN(userChoice));
+//   return hotelPrice1Night * userChoice;
+// }
+
+// // 2. Define a function called planeRideCost().
+
+// function planeRideCost() {
+//   const london = 183;
+//   const paris = 220;
+//   const otherLocations = 300;
+
+//   let userDestination;
+//   do {
+//     userDestination = prompt(`Please enter your holiday destination:`);
+//   } while (!userDestination || !isNaN(userDestination));
+
+//   if (userDestination.toLowerCase() === `paris`) {
+//     return paris;
+//   } else if (userDestination.toLowerCase() === `london`) {
+//     return london;
+//   } else {
+//     return otherLocations;
+//   }
+// }
+
+// // 3. define a function called rentalCarCost().
+
+// function rentalCarCost() {
+//   let userNumOfDays;
+//   const carPrice = 40;
+//   const discountPercentage = 5;
+//   const rentalDiscount = (discountPercentage / 100) * carPrice;
+//   const discountedPrice = carPrice - rentalDiscount;
+
+//   do {
+//     userNumOfDays = Number(
+//       prompt(`How many days would you like to rent the car?`)
+//     );
+//   } while (userNumOfDays === 0 || isNaN(userNumOfDays));
+
+//   if (userNumOfDays <= 10) {
+//     return userNumOfDays * carPrice;
+//   } else {
+//     return discountedPrice * userNumOfDays;
+//   }
+// }
+
+// // 4. define a function totalVacationCost() that returns all the functions up top
+
+// function totalVacationCost() {
+//   const hotelPrice = hotelCost();
+//   const planeCost = planeRideCost();
+//   const carPrice = rentalCarCost();
+//   console.log(hotelPrice);
+//   console.log(planeCost);
+//   console.log(carPrice);
+//   console.log(
+//     `Your total sums up to :`,
+//     `$${hotelPrice + planeCost + carPrice}`
+//   );
+// }
+// totalVacationCost();
+
+function displayInFrame(input) {
+  // Split the input string into an array of words
+  const wordsArray = input.split(", ");
+
+  // Find the length of the longest word
+  const maxLength = Math.max(...wordsArray.map((word) => word.length));
+
+  // Print the rectangular frame
+  console.log("*".repeat(maxLength + 4));
+  wordsArray.forEach((word) => {
+    console.log(`* ${word}${" ".repeat(maxLength - word.length)} *`);
+  });
+  console.log("*".repeat(maxLength + 4));
 }
 
-// 2. Define a function called planeRideCost().
-
-function planeRideCost() {
-  const london = 183;
-  const paris = 220;
-  const otherLocations = 300;
-
-  let userDestination;
-  do {
-    userDestination = prompt(`Please enter your holiday destination:`);
-  } while (!userDestination || !isNaN(userDestination));
-
-  if (userDestination.toLowerCase() === `paris`) {
-    return paris;
-  } else if (userDestination.toLowerCase() === `london`) {
-    return london;
-  } else {
-    return otherLocations;
-  }
-}
-
-// 3. define a function called rentalCarCost().
-
-function rentalCarCost() {
-  let userNumOfDays;
-  const carPrice = 40;
-  const discountPercentage = 5;
-  const rentalDiscount = (discountPercentage / 100) * carPrice;
-  const discountedPrice = carPrice - rentalDiscount;
-
-  do {
-    userNumOfDays = Number(
-      prompt(`How many days would you like to rent the car?`)
-    );
-  } while (userNumOfDays === 0 || isNaN(userNumOfDays));
-
-  if (userNumOfDays <= 10) {
-    return userNumOfDays * carPrice;
-  } else {
-    return discountedPrice * userNumOfDays;
-  }
-}
-
-// 4. define a function totalVacationCost() that returns all the functions up top
-
-function totalVacationCost() {
-  const hotelPrice = hotelCost();
-  const planeCost = planeRideCost();
-  const carPrice = rentalCarCost();
-  console.log(hotelPrice);
-  console.log(planeCost);
-  console.log(carPrice);
-  console.log(
-    `Your total sums up to :`,
-    `$${hotelPrice + planeCost + carPrice}`
-  );
-}
-totalVacationCost();
+// Prompt the user for input
+const userInput = prompt("Enter several words separated by commas:");
+// Call the function to display words in a frame
+displayInFrame(userInput);
