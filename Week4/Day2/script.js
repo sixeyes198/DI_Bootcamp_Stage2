@@ -218,6 +218,8 @@
 // }
 // totalVacationCost();
 
+//Dail xp mandatory
+
 function displayInFrame(input) {
   // Split the input string into an array of words
   const wordsArray = input.split(", ");
