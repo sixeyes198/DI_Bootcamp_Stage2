@@ -67,43 +67,153 @@
 // isDivisible(45);
 
 //Exercise 4 : Shopping List
-// Create a function called myBill() that takes no parameters.
 
-// The function should return the total price of your shoppingList. In order to do this you must follow these rules:
-// The item must be in stock. (Hint : check out if .. in)
-// If the item is in stock find out the price in the prices object.
+// const stock = {
+//   banana: 6,
+//   apple: 0,
+//   pear: 12,
+//   orange: 32,
+//   blueberry: 1,
+// };
+// const prices = {
+//   banana: 4,
+//   apple: 2,
+//   pear: 1,
+//   orange: 1.5,
+//   blueberry: 10,
+// };
 
-// Call the myBill() function.
+// // 2. Create an array called shoppingList
 
-const stock = {
-  banana: 6,
-  apple: 0,
-  pear: 12,
-  orange: 32,
-  blueberry: 1,
-};
-const prices = {
-  banana: 4,
-  apple: 2,
-  pear: 1,
-  orange: 1.5,
-  blueberry: 10,
-};
+// const shoppingList = ["Banana", "Orange", "Apple"];
 
-const shoppingList = ["Banana", "Orange", "Apple"];
+// // 3. Create a function called myBill() that takes no parameters.
+// // 4. function should return the total price of your shoppingList
+// const sum = stock.banana + stock.orange + stock.apple;
+// console.log(`$${sum}`);
+// function myBill() {
+//   if (stock.banana > 1 && stock.orange > 1 && stock.apple == 0) {
+//     console.log(`The sum of your shopping list is: $${sum}`);
+//   } else {
+//     console.log("Items out of stock");
+//   }
+// }
+// // 5. call the function
+// myBill();
 
-function myBill() {
-  if (stock.banana > 1) {
-    console.log("the price for banana is:" + "$" + prices.banana);
-    if (stock.orange > 1) {
-      console.log("the price for orange is:" + "$" + prices.orange);
-    }
-    if (stock.apple > 1) {
-      console.log(prices.apple);
-    }
-    {
-      console.log(`This item is out of stock`);
-    }
+// Excersice 5:
+
+// 1. Create a function named changeEnough(itemPrice, amountOfChange) that
+
+// 2. In the function, determine whether or not you can afford the item.
+
+// function changeEnough(itemPrice, amountOfChange) {
+//   const sum = calculatedSum(amountOfChange);
+//   if (sum >= itemPrice) {
+//     console.log(`you can afford the item`);
+//     return true;
+//   } else {
+//     console.log(`you cant afford the item`);
+//     return false;
+//   }
+// }
+
+// function calculatedSum(arr) {
+//   let sum = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     let numberOfCoins = arr[i];
+//     if (i === 0) {
+//       coinValue = 0.25;
+//     }
+//     if (i === 1) {
+//       coinValue = 0.1;
+//     }
+//     if (i === 2) {
+//       coinValue = 0.05;
+//     }
+//     if (i === 3) {
+//       coinValue = 0.01;
+//     }
+//     console.log(" we have " + numberOfCoins, coinValue);
+//     sum = sum + numberOfCoins * coinValue;
+//   }
+//   console.log(sum);
+//   return sum;
+// }
+
+// changeEnough(4.25, [25, 20, 5, 0]);
+
+// Excersice 6:
+
+//1. Define a function called hotelCost()
+
+const hotelPrice1Night = 140;
+
+function hotelCost() {
+  let userChoice;
+  do {
+    userChoice = Number(
+      prompt(`Welcome, How many nights would you like to stay?`)
+    );
+  } while (userChoice === 0 || isNaN(userChoice));
+  return hotelPrice1Night * userChoice;
+}
+
+// 2. Define a function called planeRideCost().
+
+function planeRideCost() {
+  const london = 183;
+  const paris = 220;
+  const otherLocations = 300;
+
+  let userDestination;
+  do {
+    userDestination = prompt(`Please enter your holiday destination:`);
+  } while (!userDestination || !isNaN(userDestination));
+
+  if (userDestination.toLowerCase() === `paris`) {
+    return paris;
+  } else if (userDestination.toLowerCase() === `london`) {
+    return london;
+  } else {
+    return otherLocations;
   }
 }
-myBill();
+
+// 3. define a function called rentalCarCost().
+
+function rentalCarCost() {
+  let userNumOfDays;
+  const carPrice = 40;
+  const discountPercentage = 5;
+  const rentalDiscount = (discountPercentage / 100) * carPrice;
+  const discountedPrice = carPrice - rentalDiscount;
+
+  do {
+    userNumOfDays = Number(
+      prompt(`How many days would you like to rent the car?`)
+    );
+  } while (userNumOfDays === 0 || isNaN(userNumOfDays));
+
+  if (userNumOfDays <= 10) {
+    return userNumOfDays * carPrice;
+  } else {
+    return discountedPrice * userNumOfDays;
+  }
+}
+
+// 4. define a function totalVacationCost() that returns all the functions up top
+
+function totalVacationCost() {
+  const hotelPrice = hotelCost();
+  const planeCost = planeRideCost();
+  const carPrice = rentalCarCost();
+  console.log(hotelPrice);
+  console.log(planeCost);
+  console.log(carPrice);
+  console.log(
+    `Your total sums up to :`,
+    `$${hotelPrice + planeCost + carPrice}`
+  );
+}
+totalVacationCost();
