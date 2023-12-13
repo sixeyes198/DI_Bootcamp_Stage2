@@ -47,8 +47,8 @@
 
 // 1. Retrieve the form and console.log it.
 
-const form = document.forms;
-console.log(form);
+// const form = document.forms;
+// console.log(form);
 
 // 2 Retrieve the inputs by their id and console.log them.
 
@@ -63,21 +63,60 @@ console.log(form);
 // console.log(name1, name2);
 
 // 4 When the user submits the form (ie. submit event listener)
-// use event.preventDefault(), why ? //  need to finish this !!
-const button = document.forms[0].elements[2];
-const container = document.querySelector(`ul`);
-const li1 = document.createElement(`li`);
-const li2 = document.createElement(`li`);
-li1.textContent = "first name is:";
-li2.textContent = "last name is:";
-container.append(li1);
-container.append(li2);
+// use event.preventDefault(), why ? //
 
-button.addEventListener(`click`, getUserInfo);
+// const button = document.forms[0].elements[2];
+// const container = document.querySelector(`ul`);
+// let li1 = document.createElement(`li`);
+// let li2 = document.createElement(`li`);
 
-function getUserInfo(e) {
-  e.preventDefault();
-  let li = document.forms[0].firstname.value;
-  let userInfo2 = document.forms[0].lastname.value;
-  console.log(`Hey: ` + `${userInfo}`, `${userInfo2}`);
-}
+// button.addEventListener(`submit`, getUserInfo);
+
+// function getUserInfo() {
+//   li1 = name1.firstname.input;
+//   li2 = name2.lastname.input;
+//   console.log(e.target);
+// }
+
+//Exercise 3 : Transform The Sentence
+
+// 1 .Declare a global variable named allBoldItems.
+// const allBoldItems = [];
+// // // 2 .Create a function called getBoldItems() that takes no parameter. This function should collect all the bold items inside the paragraph and assign them to the allBoldItems variable.
+
+// const all = document.getElementsByTagName(`strong`);
+
+// function getBoldItems() {
+//   for (i = 0; i < all.length; i++) {
+//     console.log(all[i].innerText);
+//     allBoldItems.push(all[i]);
+//   }
+//   console.log(allBoldItems);
+// }
+// getBoldItems();
+
+// // 3 . Create a function called highlight() that changes the color of all the bold text to blue.
+// // const all = document.getElementsByTagName(`strong`);
+// function highlight(e) {
+//   for (i = 0; i < all.length; i++) {
+//     all[i].setAttribute(`style`, `color:blue`);
+//   }
+// }
+// highlight();
+
+// // 4. Create a function called returnItemsToDefault() that changes the color of all the bold text back to black.
+// // const all = document.getElementsByTagName(`strong`);
+// function returnItemsToDefault(e) {
+//   for (i = 0; i < all.length; i++) {
+//     all[i].setAttribute(`style`, `color:black`);
+//   }
+// }
+// returnItemsToDefault();
+
+// // 5. Call the function highlight() on mouseover (ie. when the mouse pointer is moved onto the paragraph), and the function returnItemsToDefault() on mouseout (ie. when the mouse pointer is moved out of the paragraph).
+
+// const onAndOff = document.querySelector(`p`);
+// onAndOff.addEventListener(`mouseover`, highlight);
+// onAndOff.addEventListener(`mouseout`, returnItemsToDefault);
+
+// Exercice 4 : Volume Of A Sphere
