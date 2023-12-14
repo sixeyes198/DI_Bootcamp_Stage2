@@ -78,69 +78,38 @@
 // image : a url,
 // alreadyRead : which is a boolean (true or false)
 
-const books = [
-  {
-    title: `Game of thornes`,
-    author: `George R. R. Martin`,
-    Image: `https://prodimage.images-bn.com/pimages/9780553805444_p0_v5_s1200x630.jpg `,
-    alreadyRead: true,
-  },
-  {
-    title: `The witcher`,
-    author: `Andrzej Sapkowski`,
-    Image: ` https://m.media-amazon.com/images/I/51WpIuX+EIL.jpg `,
-    alreadyRead: true,
-  },
-];
+// const books = [
+//   {
+//     title: `Game of thornes`,
+//     author: `George R. R. Martin`,
+//     Image: `https://prodimage.images-bn.com/pimages/9780553805444_p0_v5_s1200x630.jpg `,
+//     alreadyRead: true,
+//   },
+//   {
+//     title: `The witcher`,
+//     author: `Andrzej Sapkowski`,
+//     Image: ` https://m.media-amazon.com/images/I/51WpIuX+EIL.jpg `,
+//     alreadyRead: true,
+//   },
+// ];
 
-const container = document.querySelector(".list-books");
-const table = document.createElement("table");
-const headerRow = document.createElement("tr");
-const thTitle = document.createElement("th");
-const thAuthor = document.createElement("th");
-const thimage = document.createElement("th");
-thTitle.textContent = "Title";
-thAuthor.textContent = "Author";
-thimage.textContent = "Img";
-table.style.border = "1px solid";
-container.append(table);
-table.append(headerRow);
-headerRow.append(thTitle, thAuthor, thimage);
-
-for (let i = 0; i < books.length; i++) {
-  console.log(books[i]);
-  const tr = document.createElement("tr");
-  const tdTitle = document.createElement("td");
-  const tdAuthor = document.createElement("td");
-  const tdImage = document.createElement("td");
-  if (books[i].alreadyRead) {
-    tdAuthor.style.color = "red";
-    tdTitle.style.color = "red";
-  }
-  tdTitle.textContent = books[i].title;
-  tdAuthor.textContent = books[i].author;
-  tdImage.innerHTML = `<img src='${books[i].Image}' width="100px"/>`;
-  table.append(tr);
-  tr.append(tdTitle, tdAuthor, tdImage);
-}
-
-// const div1 = document.querySelector(`list-books`);
-// const table = document.createElement(`table`);
-// const headerRow = document.createElement(`tr`);
-// const thTitle = document.createElement(`th`);
-// const thAuthor = document.createElement(`th`);
-// const thImage = document.createElement(`th`);
+// const container = document.querySelector(".list-books");
+// const table = document.createElement("table");
+// const headerRow = document.createElement("tr");
+// const thTitle = document.createElement("th");
+// const thAuthor = document.createElement("th");
+// const thimage = document.createElement("th");
 // thTitle.textContent = "Title";
 // thAuthor.textContent = "Author";
-// thImage.textContent = "Img";
+// thimage.textContent = "Img";
 // table.style.border = "1px solid";
-
-// div1.append(table);
+// container.append(table);
 // table.append(headerRow);
-// headerRow.append(thAuthor, thAuthor, thImage);
+// headerRow.append(thTitle, thAuthor, thimage);
 
-// for (let i = 0; i < allBooks.length; i++) {
-//   const tr = document.createElement(`tr`);
+// for (let i = 0; i < books.length; i++) {
+//   console.log(books[i]);
+//   const tr = document.createElement("tr");
 //   const tdTitle = document.createElement("td");
 //   const tdAuthor = document.createElement("td");
 //   const tdImage = document.createElement("td");
@@ -150,13 +119,7 @@ for (let i = 0; i < books.length; i++) {
 //   }
 //   tdTitle.textContent = books[i].title;
 //   tdAuthor.textContent = books[i].author;
-//   tdImage.innerHTML = `<img src='${books[i].image}' width="100px"/>`;
+//   tdImage.innerHTML = `<img src='${books[i].Image}' width="100px"/>`;
 //   table.append(tr);
 //   tr.append(tdTitle, tdAuthor, tdImage);
 // }
-
-// let obj = {
-//   title: "harry potter",
-// };
-
-// console.log(obj.title);
