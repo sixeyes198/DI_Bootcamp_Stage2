@@ -120,3 +120,25 @@
 // onAndOff.addEventListener(`mouseout`, returnItemsToDefault);
 
 // Exercice 4 : Volume Of A Sphere
+
+let form = document.querySelector(`form`); // accessing the form
+let radiusInput = document.getElementsById(`radius`);
+console.log(radiusInput);
+
+let radius = Number(radiusInput);
+if (isNaN(radius) || radius <= 0) {
+  let volume = (document.getElementById(
+    `result`
+  ).innerText = `Invalid ,enter a positive number.`);
+} else {
+  let volume = (4 / 3) * Math.PI * Math.pow(radius, 3);
+  volume = volume.toFixed(2);
+  volume = document.getElementById(`volume`).innerText = volume;
+}
+
+const calculate = document.getElementById(`submit`);
+
+calculate.addEventListener(`click`, toCalculate);
+function toCalculate() {
+  preventDefault();
+}
