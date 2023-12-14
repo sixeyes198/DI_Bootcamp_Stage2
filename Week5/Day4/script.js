@@ -120,14 +120,16 @@
 // onAndOff.addEventListener(`mouseout`, returnItemsToDefault);
 
 // Exercice 4 : Volume Of A Sphere
-const radiusInput = document.getElementById(`radius`); //accessing
-const button = document.getElementById(`submit`); // accessing
-const volume = document.getElementById(`volume`);
-button.addEventListener(`click`, calculate); //creating click event, to call the function
+// const radiusInput = document.getElementById(`radius`); //accessing
+// const button = document.getElementById(`submit`); // accessing
+// const volume = document.getElementById(`volume`);
+// button.addEventListener(`click`, calculate); //creating click event, to call the function
 
-function calculate(e) {
-  e.preventDefault();
-  var r = Number(radiusInput.value); // creating a function and new variable for the calculation
-  var volume = Math.PI * r * r;
-  console.log(volume.toFixed(2));
-}
+// function calculate(e) {
+//   e.preventDefault();
+//   var r = Number(radiusInput.value); // creating a function and new variable for the calculation
+//   var volume = Math.PI * r * r;
+//   console.log(volume.toFixed(2));
+// }
+
+// Excersice xp daily
