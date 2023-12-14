@@ -123,3 +123,55 @@
 //   table.append(tr);
 //   tr.append(tdTitle, tdAuthor, tdImage);
 // }
+
+// Excersice Daily xp
+
+// 1. Create an array which value is the planets of the solar system.
+
+const planetsOfSolarSystem = [
+  `Mercury`,
+  `Venus`,
+  `Earth`,
+  `Mars`,
+  `Jupiter`,
+  `Saturn`,
+  `Uranus`,
+  `Neptune`,
+];
+
+const classes = [
+  `planet1`,
+  `planet2`,
+  `planet3`,
+  `planet4`,
+  `planet5`,
+  `planet6`,
+  `planet7`,
+  `planet8`,
+];
+const colors = [
+  `red`,
+  `blue`,
+  `yellow`,
+  `purple`,
+  `orange`,
+  `green`,
+  `pink`,
+  `violt`,
+];
+
+// 2. For each planet in the array, create a <div> using createElement. This div should have a class named "planet".
+for (i = 0; i < planetsOfSolarSystem.length; i++) {
+  const planetDiv = document.createElement(`div`); //8 Divs
+  // planetDiv.setAttribute(`class`, `Planet`); // giving planet class
+  planetDiv.classList.add(classes[i]);
+  planetDiv.style.backgroundColor = colors[i]; // adding colors
+  planetDiv.innerText = planetsOfSolarSystem[i]; // the given planets value
+  console.log(planetDiv);
+  const section = document.querySelector(`section`);
+  section.append(planetDiv);
+}
+
+// 3.Each planet should have a different background color. (Hint: you could add a new class to each planet - each class containing a different background-color).
+// console.log(planetsOfSolarSystem);
+console.log(planetsOfSolarSystem);
