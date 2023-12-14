@@ -133,3 +133,28 @@
 // }
 
 // Excersice xp daily
+//Get the value of each of the inputs in the HTML file when the form is submitted. Remember the event.preventDefault()
+
+const form = document.querySelector(`form`);
+console.log(form);
+const noun = document.getElementById(`noun`).value;
+console.log(noun);
+const adjective = document.getElementById(`adjective`).value;
+console.log(adjective);
+const person = document.getElementById(`person`).value;
+console.log(person);
+const verb = document.getElementById(`verb`).value;
+console.log(verb);
+const place = document.getElementById(`place`).value;
+console.log(place);
+
+const array = [noun, adjective, person, verb, place]; //created an array
+const button = document.getElementById(`lib-button`); //creating click event
+
+button.addEventListener(`click`, retrieveInfo); // check if this function is alright
+function retrieveInfo(event) {
+  event.preventDefault();
+  for (i = 0; i < array.length.toString(); i++) {
+    console.log(array[i]);
+  }
+}
