@@ -122,39 +122,44 @@
 // Exercice 4 : Volume Of A Sphere
 // const radiusInput = document.getElementById(`radius`); //accessing
 // const button = document.getElementById(`submit`); // accessing
-// const volume = document.getElementById(`volume`);
+// const volumeOutput = document.getElementById(`volume`);
 // button.addEventListener(`click`, calculate); //creating click event, to call the function
 
 // function calculate(e) {
 //   e.preventDefault();
 //   var r = Number(radiusInput.value); // creating a function and new variable for the calculation
 //   var volume = Math.PI * r * r;
-//   console.log(volume.toFixed(2));
+//   console.log(
+//     (`The volume of a sphere with the radius of ${radiusInput} is:`,
+//     volume.toFixed(2))
+//   );
 // }
 
 // Excersice xp daily
 //Get the value of each of the inputs in the HTML file when the form is submitted. Remember the event.preventDefault()
 
-const form = document.querySelector(`form`);
-console.log(form);
-const noun = document.getElementById(`noun`).value;
-console.log(noun);
-const adjective = document.getElementById(`adjective`).value;
-console.log(adjective);
-const person = document.getElementById(`person`).value;
-console.log(person);
-const verb = document.getElementById(`verb`).value;
-console.log(verb);
-const place = document.getElementById(`place`).value;
-console.log(place);
+const form = document.querySelector(`form`); //accessing the form
 
-const array = [noun, adjective, person, verb, place]; //created an array
-const button = document.getElementById(`lib-button`); //creating click event
+const noun = document.getElementById("noun"); // accessing the input
+const adjective = document.getElementById("adjective"); // accessing the input
+const person = document.getElementById("person"); // accessing the input
+const verb = document.getElementById("verb"); // accessing the input
+const place = document.getElementById("place"); // accessing the input
 
-button.addEventListener(`click`, retrieveInfo); // check if this function is alright
-function retrieveInfo(event) {
-  event.preventDefault();
-  for (i = 0; i < array.length.toString(); i++) {
-    console.log(array[i]);
-  }
+//Accessing and adding an event listener for the  button
+
+const button = document.getElementById(`lib-button`);
+button.addEventListener(`click`, retriveData); //get info function
+
+function retriveData(e) {
+  e.preventDefault();
+  console.log(
+    noun.value,
+    adjective.value,
+    person.value,
+    verb.value,
+    place.value
+  );
 }
+
+//Make sure the values are not empty - Added a required attribute to the html
