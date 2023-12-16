@@ -75,26 +75,26 @@
 //  DRAG AND DROP EXAMPLE
 
 // // Get the draggable element
-let draggableElement = document.getElementById(`draggable`);
-draggableElement.addEventListener("dragstart", function (event) {
-  // Set the data to be dragged
-  event.dataTransfer.setData("text/plain", "drop here!");
-});
-// Get the drop target element
-let dropTarget = document.getElementById("dropTarget");
-// Add the dragover event listener to allow the drop
-dropTarget.addEventListener("dragover", function (event) {
-  event.preventDefault(); // Prevent default behavior to allow the drop
-});
-// Add the drop event listener to handle the dropped item
-dropTarget.addEventListener("drop", function (event) {
-  event.preventDefault(); // Prevent default behavior
-  // Get the dragged data
-  let draggedData = event.dataTransfer.getData(
-    "text/plain",
-    draggableElement.innerText
-  );
+// let draggableElement = document.getElementById(`draggable`);
+// draggableElement.addEventListener("dragstart", function (event) {
+//   // Set the data to be dragged
+//   event.dataTransfer.setData("text/plain", "drop here!");
+// });
+// // Get the drop target element
+// let dropTarget = document.getElementById("dropTarget");
+// // Add the dragover event listener to allow the drop
+// dropTarget.addEventListener("dragover", function (event) {
+//   event.preventDefault(); // Prevent default behavior to allow the drop
+// });
+// // Add the drop event listener to handle the dropped item
+// dropTarget.addEventListener("drop", function (event) {
+//   event.preventDefault(); // Prevent default behavior
+//   // Get the dragged data
+//   let draggedData = event.dataTransfer.getData(
+//     "text/plain",
+//     draggableElement.innerText
+//   );
 
-  // Output the dragged data to the drop target
-  dropTarget.textContent = draggedData;
-});
+//   // Output the dragged data to the drop target
+//   dropTarget.textContent = draggedData;
+// });
