@@ -77,7 +77,6 @@
 // }
 
 // Exercise 3: Drag & Drop
-
 // Copy the code above, to a structured HTML file.
 // In your Javascript file add the functionality which will allow you to drag the box and drop it into the target.
 
@@ -85,8 +84,6 @@ let drragedBox = document.getElementById(`box`);
 console.log(drragedBox);
 let target = document.getElementById(`target`);
 console.log(target);
-let target2 = document.getElementById(`target2`);
-console.log(target2);
 
 drragedBox.addEventListener(`dragstart`, function (e) {
   let selected = e.target;

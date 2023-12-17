@@ -56,7 +56,7 @@
 // let timerElement = document.getElementById(`Timer`);
 
 // function showTitle() {
-//   banner.setAttribute(`style`, `display:contents`);
+//   banner.setAttribute(`style`, `display:flex; justify-content:center`);
 // }
 // setInterval(showTitle, 500);
 
@@ -74,28 +74,31 @@
 
 //  DRAG AND DROP EXAMPLE
 
-// // Get the draggable element
-// let draggableElement = document.getElementById(`draggable`);
-// console.log(draggableElement);
-// draggableElement.addEventListener("dragstart", function (event) {
-//   // Set the data to be dragged
-//   event.dataTransfer.setData("text", "drop here!");
-// });
-// // Get the drop target element
-// let dropTarget = document.getElementById("dropTarget");
-// // Add the dragover event listener to allow the drop
-// console.log(dropTarget);
-// dropTarget.addEventListener("dragover", function (event) {
-//   event.preventDefault(); // Prevent default behavior to allow the drop
-//   let draggableElement = event.dataTransfer.getData(
-//     "text",
-//     draggableElement.text
-//   );
+// Get the draggable element
 
-//   dropTarget.in = draggedData;
-// });
-// // Add the drop event listener to handle the dropped item
-// dropTarget.addEventListener("drop", function (event) {
-//   // Get the dragged data
-//   // Output the dragged data to the drop target
-// });
+const id = document.getElementById(`draggable`);
+console.log(id);
+const target = document.getElementById(`target`);
+console.log(target);
+const target1 = document.getElementById(`target1`);
+console.log(target1);
+
+id.addEventListener(`dragstart`, function (e) {
+  let selected = e.target;
+  console.log(selected);
+  target.addEventListener(`dragover`, function (e) {
+    e.preventDefault();
+  });
+  target.addEventListener(`drop`, function (e) {
+    target.appendChild(selected);
+    selected = null;
+  });
+  target1.addEventListener(`dragover`, function (e) {
+    e.preventDefault();
+  });
+  target1.addEventListener(`drop`, function (e) {
+    e.preventDefault();
+    target1.appendChild(selected);
+    selected = null;
+  });
+});
