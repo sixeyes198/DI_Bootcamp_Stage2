@@ -83,6 +83,19 @@
 
 let drragedBox = document.getElementById(`box`);
 console.log(drragedBox);
-drragedBox.addEventListener(`dragstart`, function (event) {});
+let target = document.getElementById(`target`);
+console.log(target);
+let target2 = document.getElementById(`target2`);
+console.log(target2);
 
-//Need to finish Excersice 3
+drragedBox.addEventListener(`dragstart`, function (e) {
+  let selected = e.target;
+  console.log(selected);
+  target.addEventListener(`dragover`, function (e) {
+    e.preventDefault();
+  });
+  target.addEventListener(`drop`, function (e) {
+    target.appendChild(selected);
+    selected = null;
+  });
+});
