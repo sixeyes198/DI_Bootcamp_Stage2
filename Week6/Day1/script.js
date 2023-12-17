@@ -18,7 +18,7 @@
 // const banner = document.querySelector(`div`);
 
 // function showTitle() {
-//   banner.setAttribute(`style`, `display:contents`);
+//   banner.setAttribute(`style`, `display: flex; justify-content: center`);
 // }
 // setTimeout(showTitle, 5000);
 
@@ -74,28 +74,28 @@
 
 //  DRAG AND DROP EXAMPLE
 
-// Get the draggable element
-let draggableElement = document.getElementById(`draggable`);
-console.log(draggableElement);
-draggableElement.addEventListener("dragstart", function (event) {
-  // Set the data to be dragged
-  event.dataTransfer.setData("text", "drop here!");
-});
-// Get the drop target element
-let dropTarget = document.getElementById("dropTarget");
-// Add the dragover event listener to allow the drop
-console.log(dropTarget);
-dropTarget.addEventListener("dragover", function (event) {
-  event.preventDefault(); // Prevent default behavior to allow the drop
-  let draggableElement = event.dataTransfer.getData(
-    "text",
-    draggableElement.text
-  );
+// // Get the draggable element
+// let draggableElement = document.getElementById(`draggable`);
+// console.log(draggableElement);
+// draggableElement.addEventListener("dragstart", function (event) {
+//   // Set the data to be dragged
+//   event.dataTransfer.setData("text", "drop here!");
+// });
+// // Get the drop target element
+// let dropTarget = document.getElementById("dropTarget");
+// // Add the dragover event listener to allow the drop
+// console.log(dropTarget);
+// dropTarget.addEventListener("dragover", function (event) {
+//   event.preventDefault(); // Prevent default behavior to allow the drop
+//   let draggableElement = event.dataTransfer.getData(
+//     "text",
+//     draggableElement.text
+//   );
 
-  dropTarget.in = draggedData;
-});
-// Add the drop event listener to handle the dropped item
-dropTarget.addEventListener("drop", function (event) {
-  // Get the dragged data
-  // Output the dragged data to the drop target
-});
+//   dropTarget.in = draggedData;
+// });
+// // Add the drop event listener to handle the dropped item
+// dropTarget.addEventListener("drop", function (event) {
+//   // Get the dragged data
+//   // Output the dragged data to the drop target
+// });
