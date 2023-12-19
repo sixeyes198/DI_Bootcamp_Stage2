@@ -145,7 +145,7 @@ const adjective = document.getElementById("adjective"); // accessing the input
 const person = document.getElementById("person"); // accessing the input
 const verb = document.getElementById("verb"); // accessing the input
 const place = document.getElementById("place"); // accessing the input
-
+const story = document.getElementById(`story`);
 //Accessing and adding an event listener for the  button
 
 const button = document.getElementById(`lib-button`);
@@ -160,6 +160,8 @@ function retriveData(e) {
     verb.value,
     place.value
   );
+  story.textContent = `In a bustling ${place.value}, a ${adjective.value} named ${person.value} discovered a talking ${noun.value}.
+   This chatty ${noun.value} had the unique ability to ${verb.value} in the most ${adjective.value} way possible. ${person.value} and the loquacious ${noun.value} teamed up, turning every ${place.value} they visited into a uproarious scene of ${adjective.value} laughter.`;
 }
 
 //Make sure the values are not empty - Added a required attribute to the html
