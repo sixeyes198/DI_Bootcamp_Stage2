@@ -21,13 +21,3 @@
 
 // 3. Write in a one line comment, the difference between function declaration and function expression.
 // 4. Finally, use a one line arrow function and invoke it.
-
-function kgToGrams(weightKg) {
-  var grams = weightKg * 1000;
-  return grams;
-}
-
-// Example usage:
-var weightInKg = 2.5;
-var resultInGrams = kgToGrams(weightInKg);
-console.log(weightInKg + " kilograms is equal to " + resultInGrams + " grams.");

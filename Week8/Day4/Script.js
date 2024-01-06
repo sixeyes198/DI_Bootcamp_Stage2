@@ -117,8 +117,87 @@
 //   : console.log("no");
 
 // Exercise 5 : Colors #2
-const colors = ["Blue", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow"];
-
-const ordinal = ["th", "st", "nd", "rd"];
-
 // Write a JavaScript program that displays the colors in the following order : “1st choice is Blue .” “2nd choice is Green.” “3rd choice is Red.” ect… Hint : Use the array methods taught in class and ternary operator.
+
+// const colors = ["Blue", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow"];
+// const ordinal = ["th", "st", "nd", "rd"];
+
+// colors.forEach((color, index) => {
+//   const element = index + 1 > 3 ? 0 : index + 1;
+//   const suffix = ordinal[element];
+//   console.log(`${index + 1}${suffix} choice is ${color}.`);
+// });
+
+//6. Exercise 6 : Bank Details
+// In this exercise, you have to decide which type of variables you have to use (ie. let or const):
+// Create a global variable called bankAmount which value is the amount of money currently in your account.
+// let bankAmount = 25000;
+// // Create a variable that saves the % amount of VAT (In Israel, it’s 17%).
+// const vat = 17;
+// // Create an array with all your monthly expenses, both positive and negative (money made and money spent).
+// const details = [200, -100, 146, 167, 2900];
+// // Example : const details = ["+200", "-100", "+146", "+167", "-2900"]
+// // Create a program that modifies the expenses (ie. the positive AND the negative expenses) so that they will include taxes (multiply each expense by the VAT).
+// let totalSum = 0;
+// details.forEach((element, index) => {
+//   details[index] += (element * vat) / 100;
+//   totalSum += details[index];
+// });
+// // Display your current bankAccount standing at the end of the month.
+// console.log(`Total bank acc at end of the month:
+//  ${bankAmount + totalSum}`);
+
+/////////////////////////////////////////////////////////////////
+
+/// Daily Challenge : Go Wildcats
+
+const gameInfo = [
+  {
+    username: "john",
+    team: "red",
+    score: 5,
+    items: ["ball", "book", "pen"],
+  },
+  {
+    username: "becky",
+    team: "blue",
+    score: 10,
+    items: ["tape", "backpack", "pen"],
+  },
+  {
+    username: "susy",
+    team: "red",
+    score: 55,
+    items: ["ball", "eraser", "pen"],
+  },
+  {
+    username: "tyson",
+    team: "green",
+    score: 1,
+    items: ["book", "pen"],
+  },
+];
+// Create an array using forEach that contains all the usernames from the gameInfo array, add an exclamation point (ie. “!”) to the end of every username.
+let usernames = [];
+gameInfo.forEach((player) => {
+  usernames.push(player.username + "!");
+});
+console.log(usernames);
+
+// Create an array using forEach that contains the usernames of all players with a score bigger than 5.
+
+const winners = [];
+gameInfo.forEach((player) => {
+  if (player.score > 5) {
+    winners.push(player.username);
+  }
+});
+console.log(winners);
+
+// Find and display the total score of the users. (Hint: The total score is 71)
+
+const totalScore = gameInfo.reduce((accumulator, player) => {
+  return accumulator + player.score;
+}, 0);
+
+console.log(totalScore);
