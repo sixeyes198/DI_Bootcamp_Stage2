@@ -2,11 +2,10 @@
 
 // Create a one line function (ie. an arrow function) that receives two numbers as parameters and returns the sum.
 
-// let num = (a) => (b) => a + b;
-// const sum = num(5)(10);
-// console.log(sum);
+// const sum = (a, b) => a + b;
+// console.log(sum(2, 5));
 
-/////////////////////////////////////////
+///////////////////////////////////////
 
 // Exercise 2 : Kg And Grams
 
