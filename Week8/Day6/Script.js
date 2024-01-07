@@ -142,14 +142,14 @@ const cloneGroceries = () => {
   // Yes, we will see the modification in the user variable because it's a simple assignment, and both user and client reference the same value.
 
   // Create a copy of the groceries variable
-  let shopping = { ...groceries };
+  let shopping = groceries;
 
   // Change the value of the totalPrice key
-  shopping.totalPrice = "35$";
+  groceries.totalPrice = "35$";
 
   // Check if the modification is seen in the shopping object
   console.log("Shopping object after changing totalPrice:", shopping);
-  // No, we will not see the modification in the original groceries object. The shopping object is a shallow copy, so modifications to nested objects are not reflected in the original.
+  // yes, we will  see the modification in the original groceries object. The shopping object is a shallow copy, so modifications to nested objects are reflected in the original.
 
   // Change the value of the paid key in the other object
   shopping.other.paid = false;
