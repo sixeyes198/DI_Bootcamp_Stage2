@@ -68,15 +68,16 @@
 // })(`joe`);
 // The function should add a div in the nabvar, displaying the name of the user and his profile picture.
 
-// (function (userName) {
-//   let welcomeDiv = document.createElement("div");
-//   welcomeDiv.className = "nav-item nav-link";
-//   let profileImgUrl = "https://via.placeholder.com/30";
-//   welcomeDiv.innerHTML = `
-//       <img src="${profileImgUrl}" alt="${userName} Profile Picture" class="rounded-circle" width="50" height="50"> Welcome, ${userName}!
-//     `;
-//   document.querySelector(".navbar-nav").appendChild(welcomeDiv);
-// })("Joe");
+(function (userName) {
+  let welcomeDiv = document.createElement("div");
+  welcomeDiv.className = "nav-item nav-link";
+  let profileImgUrl =
+    "https://pbs.twimg.com/profile_images/1725495920840585217/rdF0kKid_400x400.jpg";
+  welcomeDiv.innerHTML = `
+      <img src="${profileImgUrl}" alt="${userName} Profile Picture" class="rounded-circle" width="50" height="50"> Welcome, ${userName}!
+    `;
+  document.querySelector(".navbar-nav").appendChild(welcomeDiv);
+})("Joe");
 
 /////////////////////////////////////////////////////
 
@@ -110,53 +111,53 @@
 
 ///////////////////////////////////////////////////
 // Daily Challenge: Groceries
-let client = "John";
+// let client = "John";
 
-const groceries = {
-  fruits: ["pear", "apple", "banana"],
-  vegetables: ["tomatoes", "cucumber", "salad"],
-  totalPrice: "20$",
-  other: {
-    paid: true,
-    meansOfPayment: ["cash", "creditCard"],
-  },
-};
+// const groceries = {
+//   fruits: ["pear", "apple", "banana"],
+//   vegetables: ["tomatoes", "cucumber", "salad"],
+//   totalPrice: "20$",
+//   other: {
+//     paid: true,
+//     meansOfPayment: ["cash", "creditCard"],
+//   },
+// };
 
-const displayGroceries = () => {
-  groceries.fruits.forEach((fruit) => {
-    console.log(fruit);
-  });
-};
-displayGroceries();
+// const displayGroceries = () => {
+//   groceries.fruits.forEach((fruit) => {
+//     console.log(fruit);
+//   });
+// };
+// displayGroceries();
 
-const cloneGroceries = () => {
-  // Create a copy of the client variable
-  let user = client;
+// const cloneGroceries = () => {
+//   // Create a copy of the client variable
+//   let user = client;
 
-  // Change the client variable
-  client = "Betty";
+//   // Change the client variable
+//   client = "Betty";
 
-  // Check if the modification is seen in the user variable
-  console.log("User variable:", user);
-  // Yes, we will see the modification in the user variable because it's a simple assignment, and both user and client reference the same value.
+//   // Check if the modification is seen in the user variable
+//   console.log("User variable:", user);
+//   // Yes, we will see the modification in the user variable because it's a simple assignment, and both user and client reference the same value.
 
-  // Create a copy of the groceries variable
-  let shopping = groceries;
+//   // Create a copy of the groceries variable
+//   let shopping = groceries;
 
-  // Change the value of the totalPrice key
-  groceries.totalPrice = "35$";
+//   // Change the value of the totalPrice key
+//   groceries.totalPrice = "35$";
 
-  // Check if the modification is seen in the shopping object
-  console.log("Shopping object after changing totalPrice:", shopping);
-  // yes, we will  see the modification in the original groceries object. The shopping object is a shallow copy, so modifications to nested objects are reflected in the original.
+//   // Check if the modification is seen in the shopping object
+//   console.log("Shopping object after changing totalPrice:", shopping);
+//   // yes, we will  see the modification in the original groceries object. The shopping object is a shallow copy, so modifications to nested objects are reflected in the original.
 
-  // Change the value of the paid key in the other object
-  shopping.other.paid = false;
+//   // Change the value of the paid key in the other object
+//   shopping.other.paid = false;
 
-  // Check if the modification is seen in the shopping object
-  console.log("Shopping object after changing paid:", shopping);
-  // Yes, we will see the modification in the original groceries object. The shopping object is a shallow copy, so modifications to nested objects are reflected in the original.
-};
+//   // Check if the modification is seen in the shopping object
+//   console.log("Shopping object after changing paid:", shopping);
+//   // Yes, we will see the modification in the original groceries object. The shopping object is a shallow copy, so modifications to nested objects are reflected in the original.
+// };
 
-// Call the function to demonstrate the behavior
-cloneGroceries();
+// // Call the function to demonstrate the behavior
+// cloneGroceries();
