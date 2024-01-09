@@ -68,16 +68,16 @@
 // })(`joe`);
 // The function should add a div in the nabvar, displaying the name of the user and his profile picture.
 
-(function (userName) {
-  let welcomeDiv = document.createElement("div");
-  welcomeDiv.className = "nav-item nav-link";
-  let profileImgUrl =
-    "https://pbs.twimg.com/profile_images/1725495920840585217/rdF0kKid_400x400.jpg";
-  welcomeDiv.innerHTML = `
-      <img src="${profileImgUrl}" alt="${userName} Profile Picture" class="rounded-circle" width="50" height="50"> Welcome, ${userName}!
-    `;
-  document.querySelector(".navbar-nav").appendChild(welcomeDiv);
-})("Joe");
+// (function (userName) {
+//   let welcomeDiv = document.createElement("div");
+//   welcomeDiv.className = "nav-item nav-link";
+//   let profileImgUrl =
+//     "https://pbs.twimg.com/profile_images/1725495920840585217/rdF0kKid_400x400.jpg";
+//   welcomeDiv.innerHTML = `
+//       <img src="${profileImgUrl}" alt="${userName} Profile Picture" class="rounded-circle" width="50" height="50"> Welcome, ${userName}!
+//     `;
+//   document.querySelector(".navbar-nav").appendChild(welcomeDiv);
+// })("Joe");
 
 /////////////////////////////////////////////////////
 
