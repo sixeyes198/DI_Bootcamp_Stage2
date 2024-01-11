@@ -3,44 +3,52 @@ const arrayOfQuotes = [
     id: 0,
     author: "Drake",
     quote: "YOLO",
+    likes: 0,
   },
   {
     id: 1,
     author: "lil wayne",
-    quote: "a-mili..a-mili..a-mili..",
+    quote: "a-mili a-mili a-mili..",
+    likes: 0,
   },
   {
     id: 2,
     author: "Bob-Marley",
     quote: "No woman no cry",
+    likes: 0,
   },
   {
     id: 3,
     author: "Steve Jobs",
     quote: "The only way to do great work is to love what you do.",
+    likes: 0,
   },
   {
     id: 4,
     author: "Robert Frost",
     quote:
       "In three words I can sum up everything I've learned about life : it goes on.",
+    likes: 0,
   },
   {
     id: 5,
     author: "Winston Churchill",
     quote:
       "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+    likes: 0,
   },
   {
     id: 6,
     author: "Franklin D. Roosevelt",
     quote:
       "The only limit to our realization of tomorrow will be our doubts of today.",
+    likes: 0,
   },
   {
     id: 7,
     author: "Peter Drucker",
     quote: "The best way to predict the future is to create it.",
+    likes: 0,
   },
 ];
 
@@ -79,6 +87,7 @@ function push(e) {
     id: arrayOfQuotes.length,
     author: authorInput,
     quote: quoteInput,
+    likes: 0,
   };
   arrayOfQuotes.push(newQuote);
   console.log(arrayOfQuotes);
@@ -99,14 +108,33 @@ function count() {
     `The number of character inside this quote: ${quoteDisplay.innerText.length}`
   );
 }
+
 buttonTwo.addEventListener("click", count2);
 function count2() {
-  const secondqoute = document.getElementById("quoteDisplay");
-  alert(
-    ` The number of characters without space is: ${secondqoute.innerText.count(
-      " "
-    )}`
-  );
+  const quoteDisplay = document.getElementById("quoteDisplay");
+  const quoteDisplayWithout = quoteDisplay.innerText
+    .split(" ")
+    .reduce((acc, val) => {
+      acc += val.length;
+      return acc;
+    }, 0);
+  alert(`The number of characters without space is: ${quoteDisplayWithout} `);
 }
-// buttonThree.addEventListener("click");
-// buttonfour.addEventListener("click");
+
+buttonThree.addEventListener("click", wordCount);
+function wordCount() {
+  const quoteDisplay = document.getElementById("quoteDisplay");
+  const quoteDisplayWords = quoteDisplay.innerText
+    .split(" ")
+    .filter((innerText) => innerText != " ").length;
+  alert(`The number of words is : ${quoteDisplayWords}`);
+}
+
+buttonfour.addEventListener("click", like);
+function like() {
+  const currentQuote = arrayOfQuotes.find((quote) => quote.id === lastId);
+  if (currentQuote) {
+    currentQuote.likes++;
+    alert(`Liked! total likes for this quote are: ${currentQuote.likes}`);
+  }
+}
