@@ -138,3 +138,97 @@ function like() {
     alert(`Liked! total likes for this quote are: ${currentQuote.likes}`);
   }
 }
+
+const filterAuthorInput = document.getElementById("filterAuthor");
+const filterButton = document.getElementById("filterButton");
+filterButton.addEventListener("click", filterQuotesByAuthor);
+
+function filterQuotesByAuthor() {
+  const filterAuthorName = filterAuthorInput.value.trim().toLowerCase();
+  const filteredQuotes = arrayOfQuotes.filter(
+    (quote) => quote.author.toLowerCase() === filterAuthorName
+  );
+
+  displayFilteredQuotes(filteredQuotes);
+}
+
+function displayFilteredQuotes() {
+  const quoteDisplay = document.getElementById("quoteDisplay");
+  const authorDisplay = document.getElementById("authorDisplay");
+
+  if (filteredQuotes.length === 0) {
+    quoteDisplay.innerText = "No quotes found for the specified author.";
+    authorDisplay.innerText = "";
+  } else {
+    const currentQuote = filteredQuotes[currentQuoteIndex];
+    quoteDisplay.innerText = `"${currentQuote.quote}" - ${currentQuote.author}`;
+    authorDisplay.innerText = "";
+  }
+}
+// function displayFilteredQuotes(quotes) {
+//   const quoteList = document.getElementById("quoteDisplay");
+//   const authorList = document.getElementById("authorDisplay");
+
+//   quoteList.innerHTML = "";
+//   authorList.innerHTML = "";
+
+//   if (quotes.length === 0) {
+//     quoteList.innerText = "No quotes found for the specified author.";
+//   } else {
+//     quotes.forEach((quote) => {
+//       const quoteItem = document.createElement("p");
+//       quoteItem.innerText = `"${quote.quote}"`;
+//       quoteList.appendChild(quoteItem);
+
+//       const authorItem = document.createElement("p");
+//       authorItem.innerText = `${quote.author}`;
+//       authorList.appendChild(authorItem);
+//     });
+//   }
+// }
+const quoteList = document.getElementById("quoteDisplay");
+const authorList = document.getElementById("authorDisplay");
+const prevButton = document.getElementById("prevButton");
+const nextButton = document.getElementById("nextButton");
+
+let filteredQuotes = [];
+let currentQuoteIndex = 0;
+
+filterButton.addEventListener("click", filterQuotesByAuthor);
+prevButton.addEventListener("click", showPreviousQuote);
+nextButton.addEventListener("click", showNextQuote);
+
+function filterQuotesByAuthor() {
+  const filterAuthorName = filterAuthorInput.value.trim().toLowerCase();
+  filteredQuotes = arrayOfQuotes.filter(
+    (quote) => quote.author.toLowerCase() === filterAuthorName
+  );
+  currentQuoteIndex = 0;
+  displayFilteredQuotes();
+}
+
+function displayFilteredQuotes() {
+  const quoteDisplay = document.getElementById("quoteDisplay");
+  const authorDisplay = document.getElementById("authorDisplay");
+  if (filteredQuotes.length === 0) {
+    quoteDisplay.innerText = "No quotes found for the specified author";
+    authorDisplay.innerText = "";
+    return;
+  }
+  const currentQuote = filteredQuotes[currentQuoteIndex];
+  quoteDisplay.innerText = `${currentQuote.quote}`;
+  authorDisplay.innerText = `${currentQuote.author}`;
+}
+
+function showPreviousQuote() {
+  if (filteredQuotes.length === 0) return;
+  currentQuoteIndex =
+    (currentQuoteIndex - 1 + filteredQuotes.length) % filteredQuotes.length;
+  displayFilteredQuotes();
+}
+
+function showNextQuote() {
+  if (filteredQuotes.length === 0) return;
+  currentQuoteIndex = (currentQuoteIndex + 1) % filteredQuotes.length;
+  displayFilteredQuotes();
+}

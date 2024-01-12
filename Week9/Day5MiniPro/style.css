@@ -8,7 +8,7 @@ body {
   justify-content: center;
 }
 #box {
-  background-color: rgb(255, 249, 134);
+  background-color: rgb(255, 255, 255);
   width: 1100px;
   height: 600px;
   margin-top: 5%;
@@ -32,13 +32,13 @@ button {
   width: 200px;
   height: 40px;
   border-radius: 5px;
-  background-color: rgb(129, 119, 225);
+  background-color: rgb(255, 255, 255);
   font-size: 20px;
   text-transform: bold;
   font-family: Poppins;
 }
 button:hover {
-  background-color: white;
+  background-color: rgb(26, 148, 230);
 }
 #quoteDisplay {
   color: white;
@@ -55,7 +55,7 @@ button:hover {
 #formbox {
   display: block;
   width: 500px;
-  height: 500px;
+  height: 300px;
   background-color: crimson;
   text-align: center;
   padding: 10px;
@@ -85,6 +85,9 @@ h2 {
   width: 100px;
   background-color: rgb(255, 154, 83);
 }
+#one:hover {
+  background-color: white;
+}
 #two {
   position: absolute;
   top: 78%;
@@ -92,12 +95,18 @@ h2 {
   width: 100px;
   background-color: rgb(30, 210, 63);
 }
+#two:hover {
+  background-color: white;
+}
 #three {
   position: absolute;
   top: 78%;
   left: 49%;
-  width: 100px;
+  width: 110px;
   background-color: rgb(30, 108, 210);
+}
+#three:hover {
+  background-color: white;
 }
 #four {
   position: absolute;
@@ -106,15 +115,28 @@ h2 {
   width: 100px;
   background-color: rgb(210, 30, 51);
 }
+#four:hover {
+  background-color: white;
+}
 #filterBox {
   text-align: center;
   position: relative;
   top: 100px;
   width: 400px;
-  height: 400px;
+  height: 300px;
   background-color: chartreuse;
 }
 #filterButton {
+  position: relative;
+  top: 20px;
+  left: 50px;
+}
+#prevButton {
+  position: relative;
+  top: 20px;
+  left: 50px;
+}
+#nextButton {
   position: relative;
   top: 20px;
   left: 50px;
