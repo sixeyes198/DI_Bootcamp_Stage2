@@ -27,7 +27,7 @@ let all = party.reduce((acc, val) => {
 }, 0);
 console.log(all);
 
-//Map
+//////////Map/////////
 //let arr = [1, 2, 3, 4, 5];
 
 // arr.forEach((element) => {
@@ -51,7 +51,7 @@ console.log(all);
 
 // console.log(newArr);
 
-//Filter
+//////////Filter///////////
 // const words = ["spray", "limit", "elite", "exuberant", "destruction", "present"];
 
 // let newArr = words.filter((element) => {
@@ -65,7 +65,7 @@ console.log(all);
 // let newNumArr = nums.filter((element) => element > 2 && element < 6);
 // console.log(newNumArr);
 
-//Reduce
+///////Reduce/////////
 // const arr = [1, 4, 9, 16];
 
 // let sum = arr.reduce((acc, val) => {
@@ -105,7 +105,7 @@ console.log(all);
 
 // console.log(sum);
 
-//Destructuring
+///////////Destructuring///////////
 
 // let arr = [1, 2];
 // let [a, b] = arr;
@@ -121,7 +121,7 @@ console.log(all);
 // console.log(fname);
 // console.log(lname);
 
-//Spread
+//////Spread/////
 // let a = 10;
 // let b = 20;
 // let rest = [30, 40, 50];
