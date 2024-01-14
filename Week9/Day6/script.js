@@ -24,3 +24,5 @@ for (let i = 0; i < orderedArray.length; i++) {
 
 console.log(result); // [[1,1,1,1],[2,2,2], 4,5,10,[20,20], 391, 392,591]
 //dont understand the bonus if they are already numbers
+
+// Question 2:
