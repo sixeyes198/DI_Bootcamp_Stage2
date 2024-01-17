@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  text-align: center;
+  position: relative;
+  padding: 10px;
+  background-color: crimson;
+}
+#logo {
+  position: absolute;
+  top: 14px;
+  left: 20px;
+  font-size: 30px;
+  font-family: "SEGA LOGO FONT";
+  color: orange;
+  font-weight: 400;
+}
+#searchBar {
+  width: 600px;
+  height: 30px;
+}
+
+/* making responsive */
