@@ -3,6 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  background-image: url(/Week10/Day5MiniPro/images/circuit-pattern.png);
+  background-color: deepskyblue;
+}
 header {
   text-align: center;
   position: relative;
@@ -16,11 +20,42 @@ header {
   font-size: 30px;
   font-family: "SEGA LOGO FONT";
   color: orange;
+  /* color: rgb(255, 255, 89); */
   font-weight: 400;
 }
 #searchBar {
   width: 600px;
   height: 30px;
 }
-
+#cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+.all {
+  height: 370px;
+  width: 300px;
+  border-radius: 10px;
+  /* overflow: hidden; */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  margin: 10px;
+  text-align: center;
+}
 /* making responsive */
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  header {
+    text-align: center;
+    position: relative;
+    padding: 10px;
+    background-color: crimson;
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+}
+
+@media all and (max-width: 480px) {
+}
