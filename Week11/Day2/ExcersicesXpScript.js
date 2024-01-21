@@ -6,23 +6,22 @@
 //   the promise rejects if argument is greater than 10.
 
 function compareToTen(num) {
-  const whichIsBigger = new Promise(function (resolve, reject) {
+  return new Promise(function (resolve, reject) {
     if (num <= 10) {
       resolve("The number is smaller or equal");
     } else {
       reject("The number is bigger");
     }
   });
-  // console.log(whichIsBigger);
-  whichIsBigger
-    .then((ret) => {
-      console.log(ret);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
 }
-compareToTen(10);
+
+compareToTen(10)
+  .then((ret) => {
+    console.log(ret);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
 
 // Exercise 2 : Promises
 
