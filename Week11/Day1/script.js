@@ -22,19 +22,19 @@
 
 //  This sequence is known as LIFO - Last In First Out.
 
-function thirdFunc() {
-  console.log("Greetings from thirdFunc()");
-}
+// function thirdFunc() {
+//   console.log("Greetings from thirdFunc()");
+// }
 
-function secondFunc() {
-  thirdFunc();
-  console.log("Greetings from secondFunc()");
-}
+// function secondFunc() {
+//   thirdFunc();
+//   console.log("Greetings from secondFunc()");
+// }
 
-function firstFunc() {
-  secondFunc();
-  console.log("Greetings from firstFunc()");
-}
+// function firstFunc() {
+//   secondFunc();
+//   console.log("Greetings from firstFunc()");
+// }
 
 firstFunc();
 
@@ -72,13 +72,13 @@ firstFunc();
 
 //Example:  setTimeout() method is a Web API
 
-console.log("Start of script");
+// console.log("Start of script");
 
-setTimeout(function () {
-  console.log("First timeout completed");
-}, 2000);
+// setTimeout(function () {
+//   console.log("First timeout completed");
+// }, 2000);
 
-console.log("End of script");
+// console.log("End of script");
 
 /////////// Callback Functions
 
@@ -122,15 +122,15 @@ console.log("End of script");
 // The function passed to new Promise is called the executor. When new Promise is created, the executor runs automatically.
 // The arguments resolve and reject are callbacks provided by JavaScript
 
-let goodGrades = true;
+// let goodGrades = true;
 
-let endSemester = new Promise(function (resolve, reject) {
-  if (goodGrades) {
-    resolve("I will get a gift");
-  } else {
-    reject("I won't get the gift");
-  }
-});
+// let endSemester = new Promise(function (resolve, reject) {
+//   if (goodGrades) {
+//     resolve("I will get a gift");
+//   } else {
+//     reject("I won't get the gift");
+//   }
+// });
 
 // console.log(endSemester);
 
@@ -140,3 +140,82 @@ let endSemester = new Promise(function (resolve, reject) {
 //     : reject("Not even close , got to do better!!");
 // });
 // console.log(semiSemester);
+
+//////// Synchronous Programming
+
+// const makeBurger = () => {
+//   const meatType = getMeat();
+//   const bunsType = getBuns();
+//   const burger = putMeatBetwenBuns(bunsType, meatType);
+//   return burger;
+// };
+
+// function getMeat() {
+//   console.log("getting the beef from the butcher");
+//   return "beef";
+// }
+
+// function getBuns() {
+//   console.log("getting the buns from the bakery");
+//   return "whole grain";
+// }
+
+// function putMeatBetwenBuns(bunsType, meatType) {
+//   console.log(`creating the ${meatType} burger with ${bunsType} buns`);
+//   return "Delicious Burger";
+// }
+
+// const burger = makeBurger();
+// console.log(burger);
+
+//////// Asynchronous programing
+
+// const makeBurger = () => {
+//   const meatType = getMeat();
+//   const bunsType = getBuns();
+//   const burger = putMeatBetwenBuns(bunsType, meatType);
+//   return burger;
+// };
+
+// function getMeat() {
+//   console.log("walking to the butcher...");
+//   setTimeout(() => {
+//     console.log("getting the beef from the butcher");
+//     return "beef";
+//   }, 2000);
+// }
+
+// function getBuns() {
+//   console.log("getting the buns from the bakery");
+//   return "whole grain";
+// }
+
+// function putMeatBetwenBuns(bunsType, meatType) {
+//   console.log(`creating the ${meatType} burger with ${bunsType} buns`);
+//   return "Delicious Burger";
+// }
+
+// const burger = makeBurger();
+// console.log(burger);
+
+/////// Promises
+
+// function startBurger() {
+//   return new Promise((resolve, reject) => {
+//     console.log("walking to the butcher...");
+//     setTimeout(() => {
+//       console.log("getting the beef from the butcher");
+//       resolve("beef");
+//     }, 2000);
+//   });
+// }
+
+// startBurger()
+//   .then((meatType) => {
+//     console.log("getting the buns from the bakery");
+//     return [meatType, "whole grains"];
+//   })
+//   .then(([bunsType, meatType]) => {
+//     console.log("preparing the burger...");
+//     console.log(`The ${meatType} burger with ${bunsType} buns is created`);
+//   });
