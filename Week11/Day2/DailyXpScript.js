@@ -44,3 +44,109 @@ makeAllCaps(array)
   .catch((error) => {
     console.log(error);
   });
+
+// 2nd Daily Challenge
+
+const morse = `{
+    "0": "-----",
+    "1": ".----",
+    "2": "..---",
+    "3": "...--",
+    "4": "....-",
+    "5": ".....",
+    "6": "-....",
+    "7": "--...",
+    "8": "---..",
+    "9": "----.",
+    "a": ".-",
+    "b": "-...",
+    "c": "-.-.",
+    "d": "-..",
+    "e": ".",
+    "f": "..-.",
+    "g": "--.",
+    "h": "....",
+    "i": "..",
+    "j": ".---",
+    "k": "-.-",
+    "l": ".-..",
+    "m": "--",
+    "n": "-.",
+    "o": "---",
+    "p": ".--.",
+    "q": "--.-",
+    "r": ".-.",
+    "s": "...",
+    "t": "-",
+    "u": "..-",
+    "v": "...-",
+    "w": ".--",
+    "x": "-..-",
+    "y": "-.--",
+    "z": "--..",
+    ".": ".-.-.-",
+    ",": "--..--",
+    "?": "..--..",
+    "!": "-.-.--",
+    "-": "-....-",
+    "/": "-..-.",
+    "@": ".--.-.",
+    "(": "-.--.",
+    ")": "-.--.-"
+  }`;
+
+//   this function converts the morse json string provided above to a morse javascript object.
+//   if the morse javascript object is empty, throw an error (use reject)
+//   else return the morse javascript object (use resolve)
+function toJs() {
+  return new Promise((resolve, reject) => {
+    try {
+      const morseJS = JSON.parse(morse);
+      if (Object.keys(morseJS).length === 0) {
+        throw new Error("Morse object is empty");
+      }
+      resolve(morseJS);
+    } catch (error) {
+      reject(error);
+    }
+  });
+}
+
+// Function to translate user input to morse code
+function toMorse(morseJS) {
+  return new Promise((resolve, reject) => {
+    try {
+      const userInput = prompt("Enter a word or sentence:");
+      if (!userInput) {
+        reject(new Error("Input cannot be empty"));
+      }
+
+      const morseTranslation = [];
+      for (const char of userInput.toLowerCase()) {
+        if (morseJS[char]) {
+          morseTranslation.push(morseJS[char]);
+        } else {
+          reject(new Error(`Character '${char}' not found in Morse object`));
+        }
+      }
+
+      resolve(morseTranslation);
+    } catch (error) {
+      reject(error);
+    }
+  });
+}
+
+// Function to join and display morse translation on the DOM
+function joinWords(morseTranslation) {
+  const result = morseTranslation.join("<br>");
+  document.body.innerHTML = `<div>${result}</div>`;
+}
+
+// Chain the three functions
+toJs()
+  .then(toMorse)
+  .then(joinWords)
+  .catch((error) => {
+    console.error(error.message);
+  });

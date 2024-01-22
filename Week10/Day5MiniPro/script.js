@@ -71,52 +71,94 @@ const robots = [
   },
 ];
 
+// improved code
+function createCard(element) {
+  let newDiv = document.createElement("div");
+  let imgContainer = document.createElement("img");
+  let h3 = document.createElement("h3");
+  let p = document.createElement("p");
+  newDiv.setAttribute("class", "all");
+  newDiv.appendChild(imgContainer);
+  newDiv.appendChild(h3);
+  newDiv.appendChild(p);
+  imgContainer.setAttribute("src", element.image);
+  h3.innerText = element.name;
+  p.innerText = element.email;
+  return newDiv;
+}
+
 function displayCards(roboArr) {
-  const searchBar = document.getElementById("searchBar"); // later to access and filter
-  const cardContainer = document.getElementById("cardContainer"); // the card container
+  const searchBar = document.getElementById("searchBar");
+  const cardContainer = document.getElementById("cardContainer");
 
   searchBar.addEventListener("input", (event) => {
-    const searchText = searchBar.value.toLowerCase(); // converting the input to lowercase
-    console.log(searchBar.value); // checking for the input
-    //filtering
+    const searchText = searchBar.value.toLowerCase();
     const result = robots.filter((name) => {
       return name.name.toLowerCase().includes(searchText);
     });
 
-    // filtered results
     cardContainer.innerHTML = " ";
 
     result.forEach((element) => {
-      let newDiv = document.createElement("div");
-      let imgContainer = document.createElement("img");
-      let h3 = document.createElement("h3");
-      let p = document.createElement("p");
-      newDiv.setAttribute("class", "all");
-      cardContainer.appendChild(newDiv);
-      newDiv.appendChild(imgContainer);
-      newDiv.appendChild(h3);
-      newDiv.appendChild(p);
-      imgContainer.setAttribute("src", element.image);
-      h3.innerText = element.name;
-      p.innerText = element.email;
+      cardContainer.appendChild(createCard(element));
     });
   });
-  // displaying the robots
+
   roboArr.forEach((element) => {
-    let newDiv = document.createElement("div"); //creating the cards div
-    let imgContainer = document.createElement("img"); // creating an img tag
-    let h3 = document.createElement("h3"); //creating the h3 title
-    let p = document.createElement("p"); // creating the paragraph
-    newDiv.setAttribute("class", "all"); //setting the class for the div
-    cardContainer.appendChild(newDiv); // appending the card to container
-    console.log(newDiv);
-    newDiv.appendChild(imgContainer);
-    newDiv.appendChild(h3);
-    newDiv.appendChild(p);
-    console.log(element);
-    imgContainer.setAttribute("src", element.image);
-    h3.innerText = element.name;
-    p.innerText = element.email;
+    cardContainer.appendChild(createCard(element));
   });
 }
+
 displayCards(robots);
+
+//// my previous code
+
+// function displayCards(roboArr) {
+//   const searchBar = document.getElementById("searchBar"); // later to access and filter
+//   const cardContainer = document.getElementById("cardContainer"); // the card container
+
+//   searchBar.addEventListener("input", (event) => {
+//     const searchText = searchBar.value.toLowerCase(); // converting the input to lowercase
+//     console.log(searchBar.value); // checking for the input
+//     //filtering
+//     const result = robots.filter((name) => {
+//       return name.name.toLowerCase().includes(searchText);
+//     });
+
+//     // filtered results
+//     cardContainer.innerHTML = " ";
+
+//     result.forEach((element) => {
+//       let newDiv = document.createElement("div");
+//       let imgContainer = document.createElement("img");
+//       let h3 = document.createElement("h3");
+//       let p = document.createElement("p");
+//       newDiv.setAttribute("class", "all");
+//       cardContainer.appendChild(newDiv);
+//       newDiv.appendChild(imgContainer);
+//       newDiv.appendChild(h3);
+//       newDiv.appendChild(p);
+//       imgContainer.setAttribute("src", element.image);
+//       h3.innerText = element.name;
+//       p.innerText = element.email;
+//     });
+//   });
+//   // displaying the robots
+//   roboArr.forEach((element) => {
+//     let newDiv = document.createElement("div"); //creating the cards div
+//     let imgContainer = document.createElement("img"); // creating an img tag
+//     let h3 = document.createElement("h3"); //creating the h3 title
+//     let p = document.createElement("p"); // creating the paragraph
+//     newDiv.setAttribute("class", "all"); //setting the class for the div
+//     cardContainer.appendChild(newDiv); // appending the card to container
+//     console.log(newDiv);
+//     newDiv.appendChild(imgContainer);
+//     newDiv.appendChild(h3);
+//     newDiv.appendChild(p);
+//     console.log(element);
+//     imgContainer.setAttribute("src", element.image);
+//     h3.innerText = element.name;
+//     p.innerText = element.email;
+//   });
+// }
+// displayCards(robots);
