@@ -45,7 +45,7 @@ makeAllCaps(array)
     console.log(error);
   });
 
-// 2nd Daily Challenge
+/////////// 2nd Daily Challenge  /////////
 
 const morse = `{
     "0": "-----",
