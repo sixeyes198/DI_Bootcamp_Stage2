@@ -55,3 +55,7 @@ h1 {
   font-weight: 400;
   margin: 2px;
 }
+p {
+  color: black;
+  font-size: 25px;
+}
