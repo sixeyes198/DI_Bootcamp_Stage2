@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#container {
+  height: 100vh;
+  background-color: hotpink;
+  border: 1px solid black;
+  display: grid;
+  place-items: center;
+}
+#converterCon {
+  border: 1px solid black;
+  padding: 1em 1em;
+}
