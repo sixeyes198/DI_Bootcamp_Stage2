@@ -1,3 +1,5 @@
+//  Excersice 1
+
 const { products } = require("./products.js");
 
 const shopProduct = (productName) => {
@@ -7,4 +9,3 @@ const shopProduct = (productName) => {
 
 shopProduct("Laptop");
 shopProduct("Running Shoes");
-// console.log(products);
