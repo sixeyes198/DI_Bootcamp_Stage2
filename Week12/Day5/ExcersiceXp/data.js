@@ -17,3 +17,5 @@ let people = [
     location: "south",
   },
 ];
+
+// export const  friends = ''
