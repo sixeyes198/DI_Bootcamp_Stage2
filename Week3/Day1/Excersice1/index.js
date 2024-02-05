@@ -1,6 +1,6 @@
 let adressNumber = "30" + " ";
-let adresStreet = "Harav maimon"+ " " ;
-let country = "israel";
+let adresStreet = "Harav maimon" + " ";
+let country = " in israel";
 
-let globalAdress = adresStreet + adressNumber + country ;
-console.log( "I live" +" "+ globalAdress);
+let globalAdress = adresStreet + adressNumber + country;
+console.log("I live at" + " " + globalAdress);
