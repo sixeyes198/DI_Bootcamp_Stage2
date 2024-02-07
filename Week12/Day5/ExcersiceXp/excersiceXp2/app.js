@@ -5,7 +5,7 @@ const usersAverageAge = () => {
   people.forEach((element) => {
     sum += element.age;
   });
-  return sum / 3;
+  return `The average age is: ${sum / 3}`;
 };
 
 console.log(usersAverageAge(people));
