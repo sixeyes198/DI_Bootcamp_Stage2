@@ -1,6 +1,6 @@
 // Excersice 2
 
-let people = [
+export const people = [
   {
     name: "John",
     age: 30,
@@ -18,4 +18,4 @@ let people = [
   },
 ];
 
-// export const  friends = ''
+//  how to use the es6 syntax
