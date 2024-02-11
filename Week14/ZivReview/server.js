@@ -2,6 +2,8 @@ import express from "express";
 
 const app = express();
 
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 // app.listen(5000, "localhost", () => {
 //   console.log("listening on port 5000");
 // });
@@ -47,4 +49,46 @@ app.get("/api/search", (req, res) => {
     return res.status(404).json({ message: "cant find your search" });
   }
   res.send("okk");
+});
+
+// get data from the body
+
+app.post("/api/products", (req, res) => {
+  const { name, price } = req.body;
+  //  const newProduct = {... req.body, id: product.length+1} //another way to do it
+  const newProduct = {
+    id: products.length + 1,
+    name,
+    price,
+  };
+  products.push(newProduct);
+  if (!newProduct) {
+    return app.status(404).send("Cant add product");
+  }
+  res.json(products);
+});
+
+// Put - Updating a product using both req.params && req.body
+
+app.put("/api/products/:id", (req, res) => {
+  const { id } = req.params;
+  const { name, price } = req.body;
+  const index = products.findIndex((item) => item.id == id);
+  products[index] = { ...products[index], name, price };
+  if (!products[index]) {
+    return res.status(404).send({ message: " Product does not exist" });
+  }
+  res.json(products);
+});
+
+// Delete a product
+
+app.delete("/api/products/:id", (req, res) => {
+  const { id } = req.params;
+  const productIndex = products.findIndex((item) => item.id == id);
+  products.splice(productIndex, 1);
+  if (!productIndex) {
+    return res.status(404).send("Cant delete product");
+  }
+  res.json("product  deleted successfully");
 });
