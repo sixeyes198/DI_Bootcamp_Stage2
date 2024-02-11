@@ -51,7 +51,7 @@ app.get("/api/search", (req, res) => {
   res.send("okk");
 });
 
-// get data from the body
+// sending  data from the body
 
 app.post("/api/products", (req, res) => {
   const { name, price } = req.body;
