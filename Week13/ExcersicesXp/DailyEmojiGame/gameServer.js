@@ -1,16 +1,15 @@
 import express from "express";
-import bodyParser from "body-parser";
-import cors from "cors";
 
 const app = express();
+\
 
-app.listen(5000, "localhost", () => {
-  console.log("Listening on port 5000");
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+app.listen(process.env.PORT|| 5000, () => {
+  console.log("Running on port 5000");
 });
 
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-app.use(cors());
 
 let emojis = [
   { emoji: "😊", name: "Smiling Face with Smiling Eyes" },
@@ -27,13 +26,14 @@ let emojis = [
 ];
 
 let score = 0;
+const options = [];
+
 
 app.get("/api/emojis", (req, res) => {
   const randomIndex = Math.floor(Math.random() * emojis.length);
   const randomEmoji = emojis[randomIndex];
   //   res.send({ emoji: randomEmoji.emoji });
 
-  const options = [];
 
   options.push(randomEmoji.name);
   while (options.length < 4) {
