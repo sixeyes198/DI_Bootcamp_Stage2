@@ -1,5 +1,5 @@
 import express from "express";
-import { blogPosts } from "../config/db.js";
+import { getallData } from "../controllers/PostsControler.js";
 
 const app = express();
 
@@ -10,6 +10,7 @@ app.listen(process.env.PORT || 3002, () => {
   console.log(`Running on ${process.env.PORT || 3002}`);
 });
 
+// app.use(router);
 // app.get("/posts", (req, res) => {
 //   res.json(blogPosts);
 // });
