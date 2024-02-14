@@ -17,15 +17,3 @@
 //       "CSS stands for Cascading Style Sheets and is used for styling web pages.",
 //   },
 // ];
-
-import knex from "knex";
-export const dataBase = knex({
-  client: "pg",
-  connection: {
-    host: "localhost",
-    port: 5432,
-    user: "postgres",
-    database: "postgres",
-    password: "yossi",
-  },
-});

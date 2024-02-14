@@ -1,10 +1,26 @@
 import express from "express";
-import { getallData } from "../controllers/PostsControler.js";
-
 const app = express();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+import postsRouter from "../routes/postsRouter.js";
+app.use("/posts", postsRouter);
+
+app.use((req, res, next) => {
+  const error = new Error("Not found");
+  error.status = 404;
+  next(error);
+});
+
+app.use((error, req, res, next) => {
+  res.status(error.status || 500);
+  res.json({
+    error: {
+      message: error.message,
+    },
+  });
+});
 
 app.listen(process.env.PORT || 3002, () => {
   console.log(`Running on ${process.env.PORT || 3002}`);
