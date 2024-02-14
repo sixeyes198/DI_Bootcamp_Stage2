@@ -17,3 +17,19 @@ export const blogPosts = [
       "CSS stands for Cascading Style Sheets and is used for styling web pages.",
   },
 ];
+
+import knex from "knex";
+const dataBase = knex({
+  client: "pg",
+  connection: {
+    host: "localhost",
+    port: 5432,
+    user: "postgres",
+    database: "postgres",
+    password: "yossi",
+  },
+});
+
+const getAllData = async () => {
+  const res = await dataBase.select("id", "title", "content").from("posts");
+};
