@@ -1,14 +1,14 @@
-import knex from "knex";
-export const dataBase = knex({
-  client: "pg",
-  connection: {
-    host: "localhost",
-    port: 5432,
-    user: "postgres",
-    database: "postgres",
-    password: "yossi",
-  },
-});
+// import knex from "knex";
+// export const dataBase = knex({
+//   client: "pg",
+//   connection: {
+//     host: "localhost",
+//     port: 5432,
+//     user: "postgres",
+//     database: "postgres",
+//     password: "yossi",
+//   },
+// });
 
 // db.select("id", "name", "price").from("products")
 // const getAllData = async () => {

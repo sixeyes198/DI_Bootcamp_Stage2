@@ -1,10 +1,12 @@
 import express from "express";
+import postsRouter from "../routes/postsRouter.js";
+import { getAllData } from "../config/pgConnects.js";
+
 const app = express();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-import postsRouter from "../routes/postsRouter.js";
 app.use("/posts", postsRouter);
 
 app.use((req, res, next) => {

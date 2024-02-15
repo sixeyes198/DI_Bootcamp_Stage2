@@ -9,6 +9,10 @@ import {
   //   deletePost,
 } from "../controllers/PostsControler.js";
 
+router.get("/posts", (req, res) => {
+  res.send("ok");
+});
+
 router.get("/post", getAllData);
 // router.get("/:id", getPostById);
 // router.post("/", createPost);
