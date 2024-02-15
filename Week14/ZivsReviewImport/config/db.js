@@ -9,5 +9,3 @@ export const db = knex({
     password: "yossi",
   },
 });
-
-console.log(db);
