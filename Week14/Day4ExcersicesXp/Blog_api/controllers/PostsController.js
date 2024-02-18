@@ -11,7 +11,7 @@ export const _getAllPosts = async (req, res) => {
   }
 };
 
-// // POST /posts: Create a new blog post.
+// // Get post by id.
 
 export const _search4Id = async (req, res) => {
   try {
@@ -25,13 +25,14 @@ export const _search4Id = async (req, res) => {
 
 // // POST /posts: Create a new blog post.
 
-export const _newPost = async (req, res) => {
-  const postData = req.body;
-  try {
-    const response = await db("'posts").insert(postData);
-    res.json(response);
-  } catch (error) {
-    console.log(error);
-    res.status(404).json({ messege: "Sorry could not enter the data" });
-  }
-};
+// export const _newPost = async (req, res) => {
+//   const { title, contnet } = req.body;
+//   const newPostData = { ...req.body };
+//   try {
+//     const response = await newPost(newPostData);
+//     res.json(response);
+//   } catch (error) {
+//     console.log(error);
+//     res.status(404).json({ messege: "Sorry could not enter the data" });
+//   }
+// };

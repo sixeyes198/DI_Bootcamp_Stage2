@@ -56,6 +56,8 @@ db("products")
 // };
 // pushData();
 
+//Updating data
+
 // db("products")
 //   .update({ price: 5000 })
 //   .where({ id: 4 })
