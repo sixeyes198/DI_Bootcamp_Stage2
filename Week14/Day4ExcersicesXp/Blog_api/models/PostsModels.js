@@ -12,46 +12,27 @@ export const search4Id = (id) => {
 
 // POST /posts: Create a new blog post.
 
-// export const newPost = async () => {
-//   const response = await db("posts").insert({
-//     title: "JavaScript course",
-//     content: "New js course starting this summer",
-//   });
-// };
-// newPost();
+export const newPost = (title, content) => {
+  return db("posts").insert(
+    {
+      title,
+      content,
+    },
+    ["id", "title", "content"]
+  );
+};
 
-// POST /posts: Create a new blog post.
+/// Put updating content
 
-// const pushData = async () => {
-//   const res = await db("posts").insert({
-//     title: " apple vison pro",
-//     content:
-//       "the apple vision pro is the best product in the market right now ,Order now at a price of : $5000",
-//   });
-//   console.log(res);
-// };
-// pushData();
-
-// PUT /posts/:id: Update an existing blog post.
-
-// db("posts")
-//   .update({ title: "javascript & PostgressSQL" })
-//   .where({ id: 5 })
-//   .then((result) => {
-//     console.log(result);
-//   })
-//   .catch((err) => {
-//     console.log(err);
-//   });
+export const editPost = (title, content, id) => {
+  console.log(id, title, content);
+  return db("posts")
+    .where({ id: id })
+    .update({ title, content }, ["title", "content"]);
+};
 
 // DELETE /posts/:id: Delete a blog post.
 
-// db("posts")
-//   .delete()
-//   .where({ id: 6 })
-//   .then((result) => {
-//     console.log(result);
-//   })
-//   .catch((err) => {
-//     console.log(err);
-//   });
+export const delPost = (id) => {
+  return db("posts").where({ id: id }).delete();
+};

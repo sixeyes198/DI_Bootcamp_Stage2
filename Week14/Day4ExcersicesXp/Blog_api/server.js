@@ -3,6 +3,9 @@ import router from "./routes/PostsRouter.js";
 import posts_router from "./routes/PostsRouter.js";
 const app = express();
 
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 app.use(router);
 app.use(posts_router);
 
