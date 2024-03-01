@@ -1,5 +1,5 @@
 import "./App.css";
-import user from "./User";
+import UserFavoriteAnimals from "./UserFavoriteAnimals";
 
 // function App() {
 //   return (
@@ -12,10 +12,17 @@ import user from "./User";
 // export default App;
 
 function App() {
+  const user = {
+    firstName: "Bob",
+    lastName: "Dylan",
+    favAnimals: ["Horse", "Turtle", "Elephant", "Monkey"],
+  };
+
   return (
     <div>
       <h3>User Name:{user.firstName}</h3>
       <h3>User lastName:{user.lastName}</h3>
+      <UserFavoriteAnimals favAnimals={user.favAnimals} />
     </div>
   );
 }
