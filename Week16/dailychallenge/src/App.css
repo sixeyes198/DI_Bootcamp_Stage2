@@ -1,33 +1,3 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +5,53 @@
   to {
     transform: rotate(360deg);
   }
+}
+.carousel-root {
+  max-width: 800px; /* Adjust the maximum width of the carousel */
+  margin: auto; /* Center the carousel */
+}
+
+.carousel {
+  border: 1px solid #ccc; /* Add a border around the carousel */
+  border-radius: 5px; /* Add border radius */
+}
+
+.carousel .box {
+  display: flex;
+  justify-content: center;
+}
+
+.carousel .box img {
+  max-width: 100%; /* Ensure images are responsive within the carousel */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px; /* Add border radius to images */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow to images */
+  margin: 10px; /* Add some margin around images */
+}
+
+h1 {
+  text-align: center; /* Center the heading */
+  margin-bottom: 20px; /* Add some spacing below the heading */
+}
+.carousel-root {
+  position: relative; /* Ensure relative positioning for absolute elements */
+}
+
+.box {
+  position: relative; /* Ensure relative positioning for absolute elements */
+}
+
+.caption {
+  position: absolute;
+  bottom: 50px; /* Adjust the distance from the bottom */
+  left: 0;
+  right: 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background color */
+  padding: 10px;
+  color: white;
+}
+
+.caption h3 {
+  margin-bottom: 5px; /* Add some spacing between title and description */
 }
