@@ -3,6 +3,8 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import Car from "./Car";
+import Car2 from "./Car";
 // const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(
 //   <React.StrictMode>
@@ -21,7 +23,8 @@ myelement.render(
       <li>Bananas</li>
       <li>Cherries</li>
     </ul>
-    Enter something: <input type="text" />
+    Enter something: <input type="text" /> <br></br>
+    <Car />
   </React.StrictMode>
 );
 
