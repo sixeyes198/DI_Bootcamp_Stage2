@@ -2,8 +2,8 @@ const UsersData = (props) => {
   return (
     <div>
       <img src={`https://robohash.org/${props.id}`} />
-      <h2>Name:{props.name}</h2>
-      <h3>User Name:{props.username}</h3>
+      <h1>Name:{props.name}</h1>
+      <h2>UserName:{props.username}</h2>
       <h3>Email:{props.email}</h3>
     </div>
   );
