@@ -1,10 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
+// import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import Element from "./Element";
-import Sum from "./Sum";
+// import Element from "./Element";
+// import Sum from "./Sum";
+import "./Exercise3.css";
+import Excersice from "./Exercise3";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
@@ -12,8 +14,10 @@ root.render(
     1: <App />
     2: <Element />
     3: React is <Sum></Sum> times better with JSX <br></br> */}
-    Excersice 2:
-    <App />
+    {/* Excersice 2:
+    <App /> */}
+    Excersice 3:
+    <Excersice />
   </React.StrictMode>
 );
 
