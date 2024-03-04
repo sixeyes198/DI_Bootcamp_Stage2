@@ -10,16 +10,34 @@ import "./App.css";
 //     </div>
 //   );
 // }
-
 // export default App;
 
-import Events from "./Events";
+// import Events from "./Events";
+
+// function App() {
+//   return (
+//     <div className="App">
+//       <Events />
+//     </div>
+//   );
+// }
+// export default App;
+
+// import Phone from "./Phone";
+// function App() {
+//   return (
+//     <div className="App">
+//       <Phone />
+//     </div>
+//   );
+// }
+// export default App;
+import Color from "./Color";
 function App() {
   return (
     <div className="App">
-      <Events />
+      <Color />
     </div>
   );
 }
-
 export default App;
