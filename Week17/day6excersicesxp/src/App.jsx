@@ -1,13 +1,15 @@
 // import ErrorBoundry from "./Component/ErrorBoundary";
-import { Routes, Route, Link } from "react-router-dom";
-import Home from "./Component/Home";
-import Profile from "./Component/Profile";
-import Shop from "./Component/Shop";
-import ErrorBoundry from "./Component/ErrorBoundary";
+// import { Routes, Route, Link } from "react-router-dom";
+// import Home from "./Component/Home";
+// import Profile from "./Component/Profile";
+// import Shop from "./Component/Shop";
+// import ErrorBoundry from "./Component/ErrorBoundary";
 
+import PostList from "./Component/PostList";
 function App() {
   return (
     <>
+      {/* Excercise 1
       <header>
         <nav>
           <Link to="/home">Home</Link>
@@ -40,7 +42,9 @@ function App() {
             </ErrorBoundry>
           }
         />
-      </Routes>
+      </Routes> */}
+      <h1>Excercise 2:</h1>
+      <PostList />
     </>
   );
 }
