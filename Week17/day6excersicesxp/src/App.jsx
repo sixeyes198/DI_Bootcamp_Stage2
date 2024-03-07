@@ -5,11 +5,35 @@
 // import Shop from "./Component/Shop";
 // import ErrorBoundry from "./Component/ErrorBoundary";
 
-import Example1 from "./Component/Example1";
-import Example2 from "./Component/Example2";
-import Example3 from "./Component/Example3";
-import PostList from "./Component/PostList";
+// import Example1 from "./Component/Example1";
+// import Example2 from "./Component/Example2";
+// import Example3 from "./Component/Example3";
+// import PostList from "./Component/PostList";
+
 function App() {
+  const fetchData = async () => {
+    try {
+      const response = await fetch(
+        "https://webhook.site/736d6221-5939-4817-b203-89eba421d21e",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            key1: "myusername",
+            email: "mymail@gmail.com",
+            name: "Isaac",
+            lastname: "Doe",
+            age: 27,
+          }),
+        }
+      );
+      console.log(response);
+      const data = await response.json();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <>
       {/* Excercise 1
@@ -49,10 +73,13 @@ function App() {
       {/* <h1>Excercise 2:</h1>
       <PostList /> */}
 
-      <h2>Excercise 3:</h2>
+      {/* <h2>Excercise 3:</h2>
       <Example1 />
       <Example2 />
-      <Example3 />
+      <Example3 /> */}
+
+      <h2>Excersice 4:</h2>
+      <button onClick={fetchData}>Log response</button>
     </>
   );
 }
