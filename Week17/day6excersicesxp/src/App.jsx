@@ -5,6 +5,9 @@
 // import Shop from "./Component/Shop";
 // import ErrorBoundry from "./Component/ErrorBoundary";
 
+import Example1 from "./Component/Example1";
+import Example2 from "./Component/Example2";
+import Example3 from "./Component/Example3";
 import PostList from "./Component/PostList";
 function App() {
   return (
@@ -43,8 +46,13 @@ function App() {
           }
         />
       </Routes> */}
-      <h1>Excercise 2:</h1>
-      <PostList />
+      {/* <h1>Excercise 2:</h1>
+      <PostList /> */}
+
+      <h2>Excercise 3:</h2>
+      <Example1 />
+      <Example2 />
+      <Example3 />
     </>
   );
 }
