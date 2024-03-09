@@ -128,23 +128,23 @@ const Form = () => {
     first_name: "",
     last_name: "",
     Age: "",
-    press: false,
     gender: "",
     destination: "",
-    checkbox: false,
+    nutsFree: false,
+    LactoseFree: false,
+    Vegan: false,
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(inputs);
-    const queryString = params.toString();
+    const queryString = new URLSearchParams(inputs).toString();
     window.location.href = `http://localhost:3000?${queryString}`;
   };
 
   const handleChange = (e) => {
-    e.preventDefault();
     const value =
-      e.target.type === "checkbox" ? e.target.checkbox : e.target.value;
+      e.target.type === "checkbox" ? e.target.checked : e.target.value;
     setInputs({ ...inputs, [e.target.name]: value });
   };
 
@@ -154,17 +154,19 @@ const Form = () => {
       <form onSubmit={(e) => handleSubmit(e)}>
         First Name:
         <input
-          name="First_name"
+          name="first_name"
           type="text"
           placeholder="First Name"
+          value={inputs.first_name}
           onChange={(e) => handleChange(e)}
         />
         <br></br>
         Last Name:{" "}
         <input
-          name="Last_name"
+          name="last_name"
           type="text"
           placeholder="Last Name"
+          value={inputs.last_name}
           onChange={(e) => handleChange(e)}
         />
         <br></br>
@@ -173,6 +175,7 @@ const Form = () => {
           name="Age"
           type="text"
           placeholder="Age"
+          value={inputs.Age}
           onChange={(e) => handleChange(e)}
         />
         <br></br>
@@ -180,6 +183,7 @@ const Form = () => {
           type="radio"
           name="gender"
           value="Male"
+          checked={inputs.gender === "Male"}
           onChange={(e) => handleChange(e)}
         />
         Male
@@ -188,13 +192,18 @@ const Form = () => {
           type="radio"
           name="gender"
           value="Female"
+          checked={inputs.gender === "Female"}
           onChange={(e) => handleChange(e)}
         />
         Female
         <br></br>
         <label>Select your destination</label>
         <br></br>
-        <select name="destination" onChange={(e) => handleChange(e)}>
+        <select
+          name="destination"
+          value={inputs.destination}
+          onChange={(e) => handleChange(e)}
+        >
           <option value>-- Please Choose a destination --</option>
           <option value="Thailand">Thailand</option>
           <option value="Japan">Japan</option>
@@ -207,6 +216,7 @@ const Form = () => {
           type="checkbox"
           name="nutsFree"
           value="nutsFree"
+          checked={inputs.nutsFree}
           onChange={(e) => handleChange(e)}
         />{" "}
         Nuts free
@@ -215,6 +225,7 @@ const Form = () => {
           type="checkbox"
           name="LactoseFree"
           value="LactoseFree"
+          checked={inputs.LactoseFree}
           onChange={(e) => handleChange(e)}
         />{" "}
         Lactose free
@@ -223,11 +234,25 @@ const Form = () => {
           type="checkbox"
           name="Vegan"
           value="Vegan"
+          checked={inputs.Vegan}
           onChange={(e) => handleChange(e)}
         />{" "}
         Vegan
         <br></br>
         <input type="submit" value="submit" />
+        <br></br>
+        <div>
+          <h2>Form Data:</h2>
+          <p>First Name: {inputs.first_name}</p>
+          <p>Last Name: {inputs.last_name}</p>
+          <p>Age: {inputs.Age}</p>
+          <p>Gender: {inputs.gender}</p>
+          <p>Destination: {inputs.destination}</p>
+          <p>Nuts Free: {inputs.nutsFree ? "Yes" : "No"}</p>
+          <p>Lactose Free: {inputs.LactoseFree ? "Yes" : "No"}</p>
+          <p>Vegan: {inputs.Vegan ? "Yes" : "No"}</p>
+        </div>
+        <br />
       </form>
     </div>
   );
